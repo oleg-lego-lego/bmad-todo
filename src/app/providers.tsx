@@ -2,9 +2,9 @@
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { ThemeProvider } from "next-themes";
+import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const [queryClient] = useState(
@@ -19,9 +19,27 @@ export function Providers({ children }: { children: React.ReactNode }) {
       })
   );
 
+  const [mswReady, setMswReady] = useState(
+    process.env.NEXT_PUBLIC_MSW_ENABLED !== "true"
+  );
+
+  useEffect(() => {
+    if (process.env.NEXT_PUBLIC_MSW_ENABLED === "true") {
+      import("@/mocks/browser").then(({ worker }) => {
+        worker.start({ onUnhandledRequest: "bypass" }).then(() => {
+          setMswReady(true);
+        });
+      });
+    }
+  }, []);
+
+  if (!mswReady) {
+    return null;
+  }
+
   return (
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+      <ThemeProvider defaultTheme="light" enableSystem>
         {children}
         <Toaster />
       </ThemeProvider>

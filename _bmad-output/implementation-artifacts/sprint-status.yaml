@@ -45,7 +45,7 @@ development_status:
   # Epic 1: Покупатель просматривает каталог и товары
   epic-1: in-progress
   1-1-inicializaciya-proekta-i-dizajn-sistema: done
-  1-2-mokovye-dannye-i-api-sloj-dlya-tovarov: backlog
+  1-2-mokovye-dannye-i-api-sloj-dlya-tovarov: review
   1-3-trustbadge-i-productcard: backlog
   1-4-stranica-kataloga-poisk-filtry-sortirovka: backlog
   1-5-kartochka-tovara-biografiya-veshchi: backlog

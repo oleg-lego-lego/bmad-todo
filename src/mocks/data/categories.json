@@ -1,0 +1,50 @@
+[
+  {
+    "id": "cat-1",
+    "name": "Ювелирные изделия",
+    "slug": "jewelry",
+    "filterOptions": [
+      { "id": "fo-1", "name": "Кольца", "slug": "rings" },
+      { "id": "fo-2", "name": "Серьги", "slug": "earrings" },
+      { "id": "fo-3", "name": "Подвески", "slug": "pendants" },
+      { "id": "fo-4", "name": "Браслеты", "slug": "bracelets" },
+      { "id": "fo-5", "name": "Цепи", "slug": "chains" },
+      { "id": "fo-6", "name": "Золото 585", "slug": "gold-585" },
+      { "id": "fo-7", "name": "Золото 750", "slug": "gold-750" },
+      { "id": "fo-8", "name": "Серебро 925", "slug": "silver-925" },
+      { "id": "fo-9", "name": "Платина", "slug": "platinum" }
+    ]
+  },
+  {
+    "id": "cat-2",
+    "name": "Техника",
+    "slug": "electronics",
+    "filterOptions": [
+      { "id": "fo-10", "name": "Смартфоны", "slug": "smartphones" },
+      { "id": "fo-11", "name": "Ноутбуки", "slug": "laptops" },
+      { "id": "fo-12", "name": "Планшеты", "slug": "tablets" },
+      { "id": "fo-13", "name": "Фотоаппараты", "slug": "cameras" },
+      { "id": "fo-14", "name": "Наушники", "slug": "headphones" },
+      { "id": "fo-15", "name": "Apple", "slug": "apple" },
+      { "id": "fo-16", "name": "Samsung", "slug": "samsung" },
+      { "id": "fo-17", "name": "Sony", "slug": "sony" },
+      { "id": "fo-18", "name": "Canon", "slug": "canon" }
+    ]
+  },
+  {
+    "id": "cat-3",
+    "name": "Часы",
+    "slug": "watches",
+    "filterOptions": [
+      { "id": "fo-19", "name": "Мужские", "slug": "mens" },
+      { "id": "fo-20", "name": "Женские", "slug": "womens" },
+      { "id": "fo-21", "name": "Унисекс", "slug": "unisex" },
+      { "id": "fo-22", "name": "Rolex", "slug": "rolex" },
+      { "id": "fo-23", "name": "Omega", "slug": "omega" },
+      { "id": "fo-24", "name": "Tissot", "slug": "tissot" },
+      { "id": "fo-25", "name": "Casio", "slug": "casio" },
+      { "id": "fo-26", "name": "Механика", "slug": "mechanical" },
+      { "id": "fo-27", "name": "Кварц", "slug": "quartz" }
+    ]
+  }
+]
