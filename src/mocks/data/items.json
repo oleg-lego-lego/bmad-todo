@@ -1,0 +1,977 @@
+[
+  {
+    "id": "item-1",
+    "title": "Золотое кольцо с бриллиантом 0.5 карат",
+    "description": "Элегантное кольцо из белого золота 585 пробы с одним бриллиантом. Отличное состояние, идеальный подарок. Полный пакет документов.",
+    "price": 85000,
+    "categoryId": "jewelry",
+    "condition": 9,
+    "trustRating": 92,
+    "shopId": "shop-1",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-28T10:00:00Z",
+    "timeline": [
+      { "date": "2026-04-25T10:00:00Z", "title": "Принято ломбардом", "description": "Изделие принято на комиссию", "status": "completed" },
+      { "date": "2026-04-26T10:00:00Z", "title": "Оценено экспертом", "description": "Проведена профессиональная оценка", "status": "completed" },
+      { "date": "2026-04-28T10:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-2",
+    "title": "Золотая цепь «Якорное плетение» 50 см",
+    "description": "Классическая мужская цепь из жёлтого золота 585 пробы. Якорное плетение, длина 50 см, вес 12 грамм.",
+    "price": 45000,
+    "categoryId": "jewelry",
+    "condition": 8,
+    "trustRating": 88,
+    "shopId": "shop-1",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-27T12:00:00Z",
+    "timeline": [
+      { "date": "2026-04-25T12:00:00Z", "title": "Принято ломбардом", "description": "Изделие принято на комиссию", "status": "completed" },
+      { "date": "2026-04-27T12:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-3",
+    "title": "Серьги с сапфирами «Капля»",
+    "description": "Изящные серьги-подвески из белого золота с двумя сапфирами. Отличное состояние, без дефектов.",
+    "price": 62000,
+    "categoryId": "jewelry",
+    "condition": 9,
+    "trustRating": 90,
+    "shopId": "shop-4",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-26T14:00:00Z",
+    "timeline": [
+      { "date": "2026-04-24T14:00:00Z", "title": "Принято ломбардом", "description": "Изделие принято на комиссию", "status": "completed" },
+      { "date": "2026-04-25T14:00:00Z", "title": "Оценено экспертом", "description": "Проведена профессиональная оценка", "status": "completed" },
+      { "date": "2026-04-26T14:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-4",
+    "title": "Кольцо с рубином «Огонь»",
+    "description": "Роскошное кольцо из жёлтого золота 750 пробы с натуральным рубином. Камень ярко-красного цвета, чистота ВVS.",
+    "price": 120000,
+    "categoryId": "jewelry",
+    "condition": 10,
+    "trustRating": 95,
+    "shopId": "shop-1",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-25T09:00:00Z",
+    "timeline": [
+      { "date": "2026-04-22T09:00:00Z", "title": "Принято ломбардом", "description": "Изделие принято на комиссию", "status": "completed" },
+      { "date": "2026-04-23T09:00:00Z", "title": "Оценено экспертом", "description": "Проведена профессиональная оценка", "status": "completed" },
+      { "date": "2026-04-25T09:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-5",
+    "title": "Подвеска «Сердце» с фианитами",
+    "description": "Нежная подвеска в форме сердца из серебра 925 пробы с фианитами. Идеально подходит для повседневной носки.",
+    "price": 8500,
+    "categoryId": "jewelry",
+    "condition": 8,
+    "trustRating": 78,
+    "shopId": "shop-5",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-24T11:00:00Z",
+    "timeline": [
+      { "date": "2026-04-22T11:00:00Z", "title": "Принято ломбардом", "description": "Изделие принято на комиссию", "status": "completed" },
+      { "date": "2026-04-24T11:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-6",
+    "title": "Браслет из белого золота с бриллиантами",
+    "description": "Изящный браслет из белого золота 585 пробы, инкрустированный 24 бриллиантами. Общий вес камней 0.48 карат.",
+    "price": 95000,
+    "categoryId": "jewelry",
+    "condition": 9,
+    "trustRating": 93,
+    "shopId": "shop-4",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-23T16:00:00Z",
+    "timeline": [
+      { "date": "2026-04-20T16:00:00Z", "title": "Принято ломбардом", "description": "Изделие принято на комиссию", "status": "completed" },
+      { "date": "2026-04-21T16:00:00Z", "title": "Оценено экспертом", "description": "Проведена профессиональная оценка", "status": "completed" },
+      { "date": "2026-04-23T16:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-7",
+    "title": "Золотое обручальное кольцо 585 проба",
+    "description": "Классическое обручальное кольцо из жёлтого золота 585 пробы. Ширина шинки 4 мм, вес 3.5 грамм.",
+    "price": 15000,
+    "categoryId": "jewelry",
+    "condition": 7,
+    "trustRating": 82,
+    "shopId": "shop-1",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-22T10:00:00Z",
+    "timeline": [
+      { "date": "2026-04-20T10:00:00Z", "title": "Принято ломбардом", "description": "Изделие принято на комиссию", "status": "completed" },
+      { "date": "2026-04-22T10:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-8",
+    "title": "Колье «Вечернее» с изумрудами",
+    "description": "Праздничное колье из белого золота с натуральными изумрудами и бриллиантами. Длина 45 см, регулируемая.",
+    "price": 150000,
+    "categoryId": "jewelry",
+    "condition": 10,
+    "trustRating": 97,
+    "shopId": "shop-4",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-21T15:00:00Z",
+    "timeline": [
+      { "date": "2026-04-18T15:00:00Z", "title": "Принято ломбардом", "description": "Изделие принято на комиссию", "status": "completed" },
+      { "date": "2026-04-19T15:00:00Z", "title": "Оценено экспертом", "description": "Проведена профессиональная оценка", "status": "completed" },
+      { "date": "2026-04-21T15:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-9",
+    "title": "Серебряные серьги-гвоздики с жемчугом",
+    "description": "Элегантные серьги-гвоздики из серебра 925 пробы с пресноводным жемчугом. Диаметр жемчужины 7 мм.",
+    "price": 5500,
+    "categoryId": "jewelry",
+    "condition": 8,
+    "trustRating": 75,
+    "shopId": "shop-5",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-20T13:00:00Z",
+    "timeline": [
+      { "date": "2026-04-18T13:00:00Z", "title": "Принято ломбардом", "description": "Изделие принято на комиссию", "status": "completed" },
+      { "date": "2026-04-20T13:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-10",
+    "title": "Золотая цепь «Панцирное плетение» 60 см",
+    "description": "Массивная мужская цепь из жёлтого золота 585 пробы. Панцирное плетение, длина 60 см, вес 18 грамм.",
+    "price": 72000,
+    "categoryId": "jewelry",
+    "condition": 8,
+    "trustRating": 86,
+    "shopId": "shop-1",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-19T11:00:00Z",
+    "timeline": [
+      { "date": "2026-04-17T11:00:00Z", "title": "Принято ломбардом", "description": "Изделие принято на комиссию", "status": "completed" },
+      { "date": "2026-04-18T11:00:00Z", "title": "Оценено экспертом", "description": "Проведена профессиональная оценка", "status": "completed" },
+      { "date": "2026-04-19T11:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-11",
+    "title": "Брошь «Роза» с рубинами",
+    "description": "Винтажная брошь в виде розы из жёлтого золота с рубиновыми лепестками. Ручная работа, уникальный экземпляр.",
+    "price": 48000,
+    "categoryId": "jewelry",
+    "condition": 7,
+    "trustRating": 80,
+    "shopId": "shop-1",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-18T14:00:00Z",
+    "timeline": [
+      { "date": "2026-04-16T14:00:00Z", "title": "Принято ломбардом", "description": "Изделие принято на комиссию", "status": "completed" },
+      { "date": "2026-04-18T14:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-12",
+    "title": "Подвеска «Крест» золото 585",
+    "description": "Классический православный крест из жёлтого золота 585 пробы. Вес 4 грамма, размеры 3×2 см.",
+    "price": 18000,
+    "categoryId": "jewelry",
+    "condition": 9,
+    "trustRating": 84,
+    "shopId": "shop-1",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-17T09:00:00Z",
+    "timeline": [
+      { "date": "2026-04-15T09:00:00Z", "title": "Принято ломбардом", "description": "Изделие принято на комиссию", "status": "completed" },
+      { "date": "2026-04-17T09:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-13",
+    "title": "Кольцо с аметистом «Королевское»",
+    "description": "Крупное кольцо из белого золота с овальным аметистом фиолетового цвета. Вес камня 3.2 карата.",
+    "price": 35000,
+    "categoryId": "jewelry",
+    "condition": 8,
+    "trustRating": 85,
+    "shopId": "shop-4",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-16T16:00:00Z",
+    "timeline": [
+      { "date": "2026-04-14T16:00:00Z", "title": "Принято ломбардом", "description": "Изделие принято на комиссию", "status": "completed" },
+      { "date": "2026-04-15T16:00:00Z", "title": "Оценено экспертом", "description": "Проведена профессиональная оценка", "status": "completed" },
+      { "date": "2026-04-16T16:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-14",
+    "title": "Серебряный браслет «Гламур»",
+    "description": "Модный браслет из серебра 925 пробы с позолотой и фианитами. Длина 19 см, регулируемая застёжка.",
+    "price": 7000,
+    "categoryId": "jewelry",
+    "condition": 8,
+    "trustRating": 72,
+    "shopId": "shop-5",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-15T12:00:00Z",
+    "timeline": [
+      { "date": "2026-04-13T12:00:00Z", "title": "Принято ломбардом", "description": "Изделие принято на комиссию", "status": "completed" },
+      { "date": "2026-04-15T12:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-15",
+    "title": "Золотые серьги «Hoops» с бриллиантами",
+    "description": "Серьги-кольца из жёлтого золота 585 пробы с дорожкой бриллиантов. Диаметр 25 мм, 16 бриллиантов.",
+    "price": 55000,
+    "categoryId": "jewelry",
+    "condition": 9,
+    "trustRating": 91,
+    "shopId": "shop-4",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-14T10:00:00Z",
+    "timeline": [
+      { "date": "2026-04-12T10:00:00Z", "title": "Принято ломбардом", "description": "Изделие принято на комиссию", "status": "completed" },
+      { "date": "2026-04-13T10:00:00Z", "title": "Оценено экспертом", "description": "Проведена профессиональная оценка", "status": "completed" },
+      { "date": "2026-04-14T10:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-16",
+    "title": "Кольцо «Обруч» с топазами",
+    "description": "Широкое кольцо из серебра 925 проды с синими топазами. Оригинальный дизайн, подходит на каждый день.",
+    "price": 3000,
+    "categoryId": "jewelry",
+    "condition": 7,
+    "trustRating": 68,
+    "shopId": "shop-5",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-13T15:00:00Z",
+    "timeline": [
+      { "date": "2026-04-11T15:00:00Z", "title": "Принято ломбардом", "description": "Изделие принято на комиссию", "status": "completed" },
+      { "date": "2026-04-13T15:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-17",
+    "title": "Платиновое кольцо с бриллиантом 1 карат",
+    "description": "Роскошное кольцо из платины 950 с бриллиантом 1.02 карата, цвет F, чистота VS1. С сертификатом GIA.",
+    "price": 145000,
+    "categoryId": "jewelry",
+    "condition": 10,
+    "trustRating": 98,
+    "shopId": "shop-1",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-12T11:00:00Z",
+    "timeline": [
+      { "date": "2026-04-09T11:00:00Z", "title": "Принято ломбардом", "description": "Изделие принято на комиссию", "status": "completed" },
+      { "date": "2026-04-10T11:00:00Z", "title": "Оценено экспертом", "description": "Проведена профессиональная оценка с сертификацией GIA", "status": "completed" },
+      { "date": "2026-04-12T11:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-18",
+    "title": "Золотой кулон «Подкова»",
+    "description": "Симпатичный кулон в виде подковы из жёлтого золота 585 пробы. Символ удачи, вес 2.8 грамма.",
+    "price": 12000,
+    "categoryId": "jewelry",
+    "condition": 8,
+    "trustRating": 79,
+    "shopId": "shop-1",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-11T14:00:00Z",
+    "timeline": [
+      { "date": "2026-04-09T14:00:00Z", "title": "Принято ломбардом", "description": "Изделие принято на комиссию", "status": "completed" },
+      { "date": "2026-04-11T14:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-19",
+    "title": "Браслет «Пандора» с подвесками",
+    "description": "Серебряный браслет-шарм с 8 подвесками из коллекции PANDORA. Длина 20 см, оригинал.",
+    "price": 25000,
+    "categoryId": "jewelry",
+    "condition": 8,
+    "trustRating": 83,
+    "shopId": "shop-4",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-10T10:00:00Z",
+    "timeline": [
+      { "date": "2026-04-08T10:00:00Z", "title": "Принято ломбардом", "description": "Изделие принято на комиссию", "status": "completed" },
+      { "date": "2026-04-09T10:00:00Z", "title": "Оценено экспертом", "description": "Подтверждена оригинальность", "status": "completed" },
+      { "date": "2026-04-10T10:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-20",
+    "title": "Золотые серьги-каффы «Виноградная лоза»",
+    "description": "Дизайнерские серьги-каффы из жёлтого золота 585 пробы в виде виноградной лозы с гранатами.",
+    "price": 42000,
+    "categoryId": "jewelry",
+    "condition": 9,
+    "trustRating": 87,
+    "shopId": "shop-1",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-09T16:00:00Z",
+    "timeline": [
+      { "date": "2026-04-07T16:00:00Z", "title": "Принято ломбардом", "description": "Изделие принято на комиссию", "status": "completed" },
+      { "date": "2026-04-08T16:00:00Z", "title": "Оценено экспертом", "description": "Проведена профессиональная оценка", "status": "completed" },
+      { "date": "2026-04-09T16:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-21",
+    "title": "MacBook Pro 14\" M3 Pro",
+    "description": "Ноутбук Apple MacBook Pro 14 дюймов на чипе M3 Pro. 18 ГБ RAM, 512 ГБ SSD. Состояние отличное, на гарантии до 2027.",
+    "price": 115000,
+    "categoryId": "electronics",
+    "condition": 9,
+    "trustRating": 94,
+    "shopId": "shop-2",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-27T10:00:00Z",
+    "timeline": [
+      { "date": "2026-04-25T10:00:00Z", "title": "Принято ломбардом", "description": "Устройство принято на комиссию", "status": "completed" },
+      { "date": "2026-04-26T10:00:00Z", "title": "Проверено техническим специалистом", "description": "Диагностика пройдена, дефектов не обнаружено", "status": "completed" },
+      { "date": "2026-04-27T10:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-22",
+    "title": "iPhone 15 Pro Max 256 ГБ",
+    "description": "Смартфон Apple iPhone 15 Pro Max, 256 ГБ, цвет Natural Titanium. Полный комплект с коробкой и документами.",
+    "price": 85000,
+    "categoryId": "electronics",
+    "condition": 9,
+    "trustRating": 91,
+    "shopId": "shop-2",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-26T12:00:00Z",
+    "timeline": [
+      { "date": "2026-04-24T12:00:00Z", "title": "Принято ломбардом", "description": "Устройство принято на комиссию", "status": "completed" },
+      { "date": "2026-04-25T12:00:00Z", "title": "Проверено техническим специалистом", "description": "Проверка по серийному номеру, аккумулятор 96%", "status": "completed" },
+      { "date": "2026-04-26T12:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-23",
+    "title": "Samsung Galaxy S24 Ultra 512 ГБ",
+    "description": "Флагманский смартфон Samsung Galaxy S24 Ultra, 512 ГБ, цвет Titanium Black. С S Pen, полный комплект.",
+    "price": 72000,
+    "categoryId": "electronics",
+    "condition": 8,
+    "trustRating": 88,
+    "shopId": "shop-2",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-25T14:00:00Z",
+    "timeline": [
+      { "date": "2026-04-23T14:00:00Z", "title": "Принято ломбардом", "description": "Устройство принято на комиссию", "status": "completed" },
+      { "date": "2026-04-24T14:00:00Z", "title": "Проверено техническим специалистом", "description": "Все функции работают корректно", "status": "completed" },
+      { "date": "2026-04-25T14:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-24",
+    "title": "iPad Pro 12.9\" M2 256 ГБ",
+    "description": "Планшет Apple iPad Pro 12.9 дюйма на чипе M2, 256 ГБ, Wi-Fi + Cellular. Состояние отличное.",
+    "price": 65000,
+    "categoryId": "electronics",
+    "condition": 8,
+    "trustRating": 86,
+    "shopId": "shop-2",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-24T11:00:00Z",
+    "timeline": [
+      { "date": "2026-04-22T11:00:00Z", "title": "Принято ломбардом", "description": "Устройство принято на комиссию", "status": "completed" },
+      { "date": "2026-04-23T11:00:00Z", "title": "Проверено техническим специалистом", "description": "Экран без дефектов, батарея 94%", "status": "completed" },
+      { "date": "2026-04-24T11:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-25",
+    "title": "Sony WH-1000XM5",
+    "description": "Беспроводные наушники Sony WH-1000XM5 с активным шумоподавлением. Чёрный цвет, полный комплект.",
+    "price": 18000,
+    "categoryId": "electronics",
+    "condition": 8,
+    "trustRating": 82,
+    "shopId": "shop-2",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-23T16:00:00Z",
+    "timeline": [
+      { "date": "2026-04-21T16:00:00Z", "title": "Принято ломбардом", "description": "Устройство принято на комиссию", "status": "completed" },
+      { "date": "2026-04-22T16:00:00Z", "title": "Проверено техническим специалистом", "description": "Акустика в идеальном состоянии", "status": "completed" },
+      { "date": "2026-04-23T16:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-26",
+    "title": "Canon EOS R6 Mark II + объектив 24-105mm",
+    "description": "Профессиональная беззеркальная камера Canon EOS R6 Mark II с объективом RF 24-105mm f/4L IS USM. Пробег 12 000 кадров.",
+    "price": 120000,
+    "categoryId": "electronics",
+    "condition": 8,
+    "trustRating": 90,
+    "shopId": "shop-2",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-22T09:00:00Z",
+    "timeline": [
+      { "date": "2026-04-19T09:00:00Z", "title": "Принято ломбардом", "description": "Оборудование принято на комиссию", "status": "completed" },
+      { "date": "2026-04-20T09:00:00Z", "title": "Проверено техническим специалистом", "description": "Матрица без битых пикселей, автофокус работает", "status": "completed" },
+      { "date": "2026-04-22T09:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-27",
+    "title": "MacBook Air 15\" M3",
+    "description": "Ультратонкий ноутбук Apple MacBook Air 15 дюймов на чипе M3. 8 ГБ RAM, 256 ГБ SSD. Midnight цвет.",
+    "price": 78000,
+    "categoryId": "electronics",
+    "condition": 9,
+    "trustRating": 89,
+    "shopId": "shop-2",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-21T13:00:00Z",
+    "timeline": [
+      { "date": "2026-04-19T13:00:00Z", "title": "Принято ломбардом", "description": "Устройство принято на комиссию", "status": "completed" },
+      { "date": "2026-04-20T13:00:00Z", "title": "Проверено техническим специалистом", "description": "Диагностика пройдена", "status": "completed" },
+      { "date": "2026-04-21T13:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-28",
+    "title": "iPhone 14 128 ГБ",
+    "description": "Смартфон Apple iPhone 14, 128 ГБ, цвет Midnight. Полный комплект, батарея 91%.",
+    "price": 42000,
+    "categoryId": "electronics",
+    "condition": 7,
+    "trustRating": 79,
+    "shopId": "shop-2",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-20T15:00:00Z",
+    "timeline": [
+      { "date": "2026-04-18T15:00:00Z", "title": "Принято ломбардом", "description": "Устройство принято на комиссию", "status": "completed" },
+      { "date": "2026-04-19T15:00:00Z", "title": "Проверено техническим специалистом", "description": "Проверена оригинальность деталей", "status": "completed" },
+      { "date": "2026-04-20T15:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-29",
+    "title": "Samsung Galaxy Tab S9 FE 128 ГБ",
+    "description": "Планшет Samsung Galaxy Tab S9 FE, 128 ГБ, Wi-Fi. С S Pen в комплекте, цвет Gray.",
+    "price": 28000,
+    "categoryId": "electronics",
+    "condition": 8,
+    "trustRating": 80,
+    "shopId": "shop-2",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-19T10:00:00Z",
+    "timeline": [
+      { "date": "2026-04-17T10:00:00Z", "title": "Принято ломбардом", "description": "Устройство принято на комиссию", "status": "completed" },
+      { "date": "2026-04-18T10:00:00Z", "title": "Проверено техническим специалистом", "description": "Экран без царапин", "status": "completed" },
+      { "date": "2026-04-19T10:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-30",
+    "title": "AirPods Pro 2 USB-C",
+    "description": "Наушники Apple AirPods Pro 2-го поколения с портом USB-C. Активное шумоподавление, полный комплект.",
+    "price": 15000,
+    "categoryId": "electronics",
+    "condition": 8,
+    "trustRating": 77,
+    "shopId": "shop-2",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-18T12:00:00Z",
+    "timeline": [
+      { "date": "2026-04-16T12:00:00Z", "title": "Принято ломбардом", "description": "Устройство принято на комиссию", "status": "completed" },
+      { "date": "2026-04-18T12:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-31",
+    "title": "Sony Alpha 7 III + объектив 28-70mm",
+    "description": "Полнокадровая беззеркальная камера Sony a7 III с объективом FE 28-70mm f/3.5-5.6 OSS. Пробег 25 000 кадров.",
+    "price": 68000,
+    "categoryId": "electronics",
+    "condition": 7,
+    "trustRating": 83,
+    "shopId": "shop-2",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-17T14:00:00Z",
+    "timeline": [
+      { "date": "2026-04-15T14:00:00Z", "title": "Принято ломбардом", "description": "Оборудование принято на комиссию", "status": "completed" },
+      { "date": "2026-04-16T14:00:00Z", "title": "Проверено техническим специалистом", "description": "Матрица чистая, стабилизация работает", "status": "completed" },
+      { "date": "2026-04-17T14:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-32",
+    "title": "Samsung Galaxy Z Flip5 256 ГБ",
+    "description": "Складной смартфон Samsung Galaxy Z Flip5, 256 ГБ, цвет Lavender. Состояние хорошее, минимальные следы использования.",
+    "price": 52000,
+    "categoryId": "electronics",
+    "condition": 7,
+    "trustRating": 76,
+    "shopId": "shop-2",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-16T11:00:00Z",
+    "timeline": [
+      { "date": "2026-04-14T11:00:00Z", "title": "Принято ломбардом", "description": "Устройство принято на комиссию", "status": "completed" },
+      { "date": "2026-04-15T11:00:00Z", "title": "Проверено техническим специалистом", "description": "Шарнир работает корректно", "status": "completed" },
+      { "date": "2026-04-16T11:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-33",
+    "title": "MacBook Pro 16\" M2 Pro",
+    "description": "Ноутбук Apple MacBook Pro 16 дюймов на чипе M2 Pro. 16 ГБ RAM, 512 ГБ SSD. Space Gray, состояние хорошее.",
+    "price": 98000,
+    "categoryId": "electronics",
+    "condition": 7,
+    "trustRating": 85,
+    "shopId": "shop-2",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-15T16:00:00Z",
+    "timeline": [
+      { "date": "2026-04-13T16:00:00Z", "title": "Принято ломбардом", "description": "Устройство принято на комиссию", "status": "completed" },
+      { "date": "2026-04-14T16:00:00Z", "title": "Проверено техническим специалистом", "description": "Клавиатура и трекпад в норме", "status": "completed" },
+      { "date": "2026-04-15T16:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-34",
+    "title": "Canon EOS R50 + объектив 18-45mm",
+    "description": "Компактная беззеркальная камера Canon EOS R50 с кит-объективом RF-S 18-45mm. Идеальна для начинающих фотографов.",
+    "price": 45000,
+    "categoryId": "electronics",
+    "condition": 9,
+    "trustRating": 84,
+    "shopId": "shop-2",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-14T09:00:00Z",
+    "timeline": [
+      { "date": "2026-04-12T09:00:00Z", "title": "Принято ломбардом", "description": "Оборудование принято на комиссию", "status": "completed" },
+      { "date": "2026-04-13T09:00:00Z", "title": "Проверено техническим специалистом", "description": "Новое состояние, пробег 500 кадров", "status": "completed" },
+      { "date": "2026-04-14T09:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-35",
+    "title": "Sony WH-1000XM4",
+    "description": "Беспроводные наушники Sony WH-1000XM4 с шумоподавлением. Цвет серебристый, следы использования минимальные.",
+    "price": 10000,
+    "categoryId": "electronics",
+    "condition": 6,
+    "trustRating": 65,
+    "shopId": "shop-2",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-13T14:00:00Z",
+    "timeline": [
+      { "date": "2026-04-11T14:00:00Z", "title": "Принято ломбардом", "description": "Устройство принято на комиссию", "status": "completed" },
+      { "date": "2026-04-13T14:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-36",
+    "title": "Rolex Datejust 36",
+    "description": "Классические мужские часы Rolex Datejust 36 мм, стальной браслет, белый циферблат. Механический автоматический калибр 3235.",
+    "price": 420000,
+    "categoryId": "watches",
+    "condition": 9,
+    "trustRating": 96,
+    "shopId": "shop-3",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-28T10:00:00Z",
+    "timeline": [
+      { "date": "2026-04-25T10:00:00Z", "title": "Принято ломбардом", "description": "Часы приняты на комиссию", "status": "completed" },
+      { "date": "2026-04-26T10:00:00Z", "title": "Проверено часовым мастером", "description": "Механизм проверен, точность хода в норме", "status": "completed" },
+      { "date": "2026-04-28T10:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-37",
+    "title": "Omega Seamaster Diver 300M",
+    "description": "Мужские дайверские часы Omega Seamaster Diver 300M, 42 мм, синий циферблат, керамический безель. Коаксиальный калибр 8800.",
+    "price": 280000,
+    "categoryId": "watches",
+    "condition": 9,
+    "trustRating": 94,
+    "shopId": "shop-3",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-27T11:00:00Z",
+    "timeline": [
+      { "date": "2026-04-24T11:00:00Z", "title": "Принято ломбардом", "description": "Часы приняты на комиссию", "status": "completed" },
+      { "date": "2026-04-25T11:00:00Z", "title": "Проверено часовым мастером", "description": "Водонепроницаемость подтверждена", "status": "completed" },
+      { "date": "2026-04-27T11:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-38",
+    "title": "Tissot PRX Powermatic 80",
+    "description": "Мужские часы Tissot PRX с автоматическим подзаводом, 40 мм, стальной браслет, синий циферблат. Запас хода 80 часов.",
+    "price": 32000,
+    "categoryId": "watches",
+    "condition": 9,
+    "trustRating": 88,
+    "shopId": "shop-3",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-26T14:00:00Z",
+    "timeline": [
+      { "date": "2026-04-24T14:00:00Z", "title": "Принято ломбардом", "description": "Часы приняты на комиссию", "status": "completed" },
+      { "date": "2026-04-25T14:00:00Z", "title": "Проверено часовым мастером", "description": "Механизм работает точно", "status": "completed" },
+      { "date": "2026-04-26T14:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-39",
+    "title": "Casio G-Shock GA-2100",
+    "description": "Мужские часы Casio G-Shock GA-2100 «Casioak», 45 мм, карбоновый корпус, минеральное стекло. Чёрный цвет.",
+    "price": 8500,
+    "categoryId": "watches",
+    "condition": 8,
+    "trustRating": 75,
+    "shopId": "shop-3",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-25T16:00:00Z",
+    "timeline": [
+      { "date": "2026-04-23T16:00:00Z", "title": "Принято ломбардом", "description": "Часы приняты на комиссию", "status": "completed" },
+      { "date": "2026-04-25T16:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-40",
+    "title": "Rolex Submariner Date",
+    "description": "Легендарные мужские часы Rolex Submariner Date, 41 мм, стальной браслет, чёрный керамический безель. Калибр 3235.",
+    "price": 500000,
+    "categoryId": "watches",
+    "condition": 10,
+    "trustRating": 98,
+    "shopId": "shop-3",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-24T09:00:00Z",
+    "timeline": [
+      { "date": "2026-04-21T09:00:00Z", "title": "Принято ломбардом", "description": "Часы приняты на комиссию", "status": "completed" },
+      { "date": "2026-04-22T09:00:00Z", "title": "Проверено часовым мастером", "description": "Полная диагностика, оригинальность подтверждена", "status": "completed" },
+      { "date": "2026-04-24T09:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-41",
+    "title": "Omega Constellation Ladies",
+    "description": "Женские часы Omega Constellation, 28 мм, стальной браслет с золотыми вставками, перламутровый циферблат. Кварцевый калибр.",
+    "price": 180000,
+    "categoryId": "watches",
+    "condition": 9,
+    "trustRating": 92,
+    "shopId": "shop-3",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-23T13:00:00Z",
+    "timeline": [
+      { "date": "2026-04-20T13:00:00Z", "title": "Принято ломбардом", "description": "Часы приняты на комиссию", "status": "completed" },
+      { "date": "2026-04-21T13:00:00Z", "title": "Проверено часовым мастером", "description": "Батарейка заменена, ход точный", "status": "completed" },
+      { "date": "2026-04-23T13:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-42",
+    "title": "Tissot Gentleman Lady",
+    "description": "Женские часы Tissot Gentleman Lady, 30 мм, стальной браслет, серебристый циферблат. Кварцевый механизм.",
+    "price": 22000,
+    "categoryId": "watches",
+    "condition": 8,
+    "trustRating": 82,
+    "shopId": "shop-3",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-22T15:00:00Z",
+    "timeline": [
+      { "date": "2026-04-20T15:00:00Z", "title": "Принято ломбардом", "description": "Часы приняты на комиссию", "status": "completed" },
+      { "date": "2026-04-22T15:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-43",
+    "title": "Casio Edifice EQB-1200",
+    "description": "Мужские часы Casio Edifice EQB-1200 с Bluetooth-подключением к смартфону, 47 мм, стальный браслет, хронограф.",
+    "price": 15000,
+    "categoryId": "watches",
+    "condition": 8,
+    "trustRating": 78,
+    "shopId": "shop-3",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-21T10:00:00Z",
+    "timeline": [
+      { "date": "2026-04-19T10:00:00Z", "title": "Принято ломбардом", "description": "Часы приняты на комиссию", "status": "completed" },
+      { "date": "2026-04-20T10:00:00Z", "title": "Проверено часовым мастером", "description": "Bluetooth-синхронизация работает", "status": "completed" },
+      { "date": "2026-04-21T10:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-44",
+    "title": "Omega Speedmaster Moonwatch",
+    "description": "Легендарные часы Omega Speedmaster Moonwatch Professional, 42 мм, ручной завод, чёрный циферблат, нейлоновый ремешок.",
+    "price": 350000,
+    "categoryId": "watches",
+    "condition": 9,
+    "trustRating": 95,
+    "shopId": "shop-3",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-20T11:00:00Z",
+    "timeline": [
+      { "date": "2026-04-17T11:00:00Z", "title": "Принято ломбардом", "description": "Часы приняты на комиссию", "status": "completed" },
+      { "date": "2026-04-18T11:00:00Z", "title": "Проверено часовым мастером", "description": "Хронограф работает корректно", "status": "completed" },
+      { "date": "2026-04-20T11:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-45",
+    "title": "Tissot Le Locle",
+    "description": "Классические унисекс часы Tissot Le Locle, 39 мм, стальный браслет, белый циферблат с гильошированием. Автоматический механизм.",
+    "price": 28000,
+    "categoryId": "watches",
+    "condition": 8,
+    "trustRating": 85,
+    "shopId": "shop-3",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-19T14:00:00Z",
+    "timeline": [
+      { "date": "2026-04-17T14:00:00Z", "title": "Принято ломбардом", "description": "Часы приняты на комиссию", "status": "completed" },
+      { "date": "2026-04-18T14:00:00Z", "title": "Проверено часовым мастером", "description": "Механизм работает точно, запас хода 72ч", "status": "completed" },
+      { "date": "2026-04-19T14:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-46",
+    "title": "Casio Vintage A1000",
+    "description": "Ретро-часы Casio Vintage A1000, стальной корпус, золотистый цвет, LED-подсветка. Унисекс модель, 38 мм.",
+    "price": 5000,
+    "categoryId": "watches",
+    "condition": 9,
+    "trustRating": 70,
+    "shopId": "shop-3",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-18T16:00:00Z",
+    "timeline": [
+      { "date": "2026-04-16T16:00:00Z", "title": "Принято ломбардом", "description": "Часы приняты на комиссию", "status": "completed" },
+      { "date": "2026-04-18T16:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-47",
+    "title": "Rolex Oyster Perpetual 36",
+    "description": "Мужские часы Rolex Oyster Perpetual, 36 мм, стальной браслет, ярко-зелёный циферблат. Автоматический калибр 3230.",
+    "price": 380000,
+    "categoryId": "watches",
+    "condition": 10,
+    "trustRating": 97,
+    "shopId": "shop-3",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-17T09:00:00Z",
+    "timeline": [
+      { "date": "2026-04-14T09:00:00Z", "title": "Принято ломбардом", "description": "Часы приняты на комиссию", "status": "completed" },
+      { "date": "2026-04-15T09:00:00Z", "title": "Проверено часовым мастером", "description": "Оригинальность подтверждена по серийному номеру", "status": "completed" },
+      { "date": "2026-04-17T09:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-48",
+    "title": "Omega De Ville Prestige Ladies",
+    "description": "Элегантные женские часы Omega De Ville Prestige, 27 мм, стальной браслет, белый перламутровый циферблат, ромбовидные индексы.",
+    "price": 150000,
+    "categoryId": "watches",
+    "condition": 9,
+    "trustRating": 90,
+    "shopId": "shop-3",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-16T13:00:00Z",
+    "timeline": [
+      { "date": "2026-04-13T13:00:00Z", "title": "Принято ломбардом", "description": "Часы приняты на комиссию", "status": "completed" },
+      { "date": "2026-04-14T13:00:00Z", "title": "Проверено часовым мастером", "description": "Кварцевый механизм, батарейка заменена", "status": "completed" },
+      { "date": "2026-04-16T13:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-49",
+    "title": "Tissot Supersport Chrono",
+    "description": "Спортивные мужские часы Tissot Supersport Chrono, 45 мм, стальный браслет, чёрный циферблат, хронограф. Кварцевый механизм.",
+    "price": 25000,
+    "categoryId": "watches",
+    "condition": 7,
+    "trustRating": 80,
+    "shopId": "shop-3",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-15T11:00:00Z",
+    "timeline": [
+      { "date": "2026-04-13T11:00:00Z", "title": "Принято ломбардом", "description": "Часы приняты на комиссию", "status": "completed" },
+      { "date": "2026-04-14T11:00:00Z", "title": "Проверено часовым мастером", "description": "Хронограф и таймер работают", "status": "completed" },
+      { "date": "2026-04-15T11:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-50",
+    "title": "Casio G-Shock GM-S2100",
+    "description": "Женские часы Casio G-Shock GM-S2100 «Casioak» в металлическом корпусе, 44 мм, розовое золото, ударопрочные.",
+    "price": 12000,
+    "categoryId": "watches",
+    "condition": 9,
+    "trustRating": 74,
+    "shopId": "shop-3",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-14T15:00:00Z",
+    "timeline": [
+      { "date": "2026-04-12T15:00:00Z", "title": "Принято ломбардом", "description": "Часы приняты на комиссию", "status": "completed" },
+      { "date": "2026-04-14T15:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-51",
+    "title": "Rolex Daytona",
+    "description": "Легендарные часы Rolex Daytona, 40 мм, стальной корпус, чёрный керамический безель, чёрный циферблат. Хронограф с тахиметром.",
+    "price": 480000,
+    "categoryId": "watches",
+    "condition": 10,
+    "trustRating": 99,
+    "shopId": "shop-3",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-13T10:00:00Z",
+    "timeline": [
+      { "date": "2026-04-10T10:00:00Z", "title": "Принято ломбардом", "description": "Часы приняты на комиссию", "status": "completed" },
+      { "date": "2026-04-11T10:00:00Z", "title": "Проверено часовым мастером", "description": "Полная экспертиза, подлинность подтверждена", "status": "completed" },
+      { "date": "2026-04-13T10:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-52",
+    "title": "Samsung Galaxy S24 128 ГБ",
+    "description": "Смартфон Samsung Galaxy S24, 128 ГБ, цвет Onyx Black. Флагман на Snapdragon 8 Gen 3, отличный экран.",
+    "price": 45000,
+    "categoryId": "electronics",
+    "condition": 8,
+    "trustRating": 81,
+    "shopId": "shop-2",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-12T14:00:00Z",
+    "timeline": [
+      { "date": "2026-04-10T14:00:00Z", "title": "Принято ломбардом", "description": "Устройство принято на комиссию", "status": "completed" },
+      { "date": "2026-04-11T14:00:00Z", "title": "Проверено техническим специалистом", "description": "Все функции работают", "status": "completed" },
+      { "date": "2026-04-12T14:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-53",
+    "title": "Кольцо «Вечность» с изумрудами",
+    "description": "Обручальное кольцо «Вечность» из белого золота 585 пробы с 12 изумрудами. Общий вес камней 1.2 карата.",
+    "price": 78000,
+    "categoryId": "jewelry",
+    "condition": 10,
+    "trustRating": 93,
+    "shopId": "shop-4",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-11T10:00:00Z",
+    "timeline": [
+      { "date": "2026-04-08T10:00:00Z", "title": "Принято ломбардом", "description": "Изделие принято на комиссию", "status": "completed" },
+      { "date": "2026-04-09T10:00:00Z", "title": "Оценено экспертом", "description": "Все камни оригинальные, подтверждено", "status": "completed" },
+      { "date": "2026-04-11T10:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-54",
+    "title": "Apple Watch Ultra 2",
+    "description": "Наручные смарт-часы Apple Watch Ultra 2, 49 мм, титановый корпус, оранжевый альпийский ремешок. GPS + Cellular.",
+    "price": 55000,
+    "categoryId": "watches",
+    "condition": 9,
+    "trustRating": 89,
+    "shopId": "shop-3",
+    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-10T14:00:00Z",
+    "timeline": [
+      { "date": "2026-04-08T14:00:00Z", "title": "Принято ломбардом", "description": "Часы приняты на комиссию", "status": "completed" },
+      { "date": "2026-04-09T14:00:00Z", "title": "Проверено техническим специалистом", "description": "Все датчики работают, батарея 95%", "status": "completed" },
+      { "date": "2026-04-10T14:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  },
+  {
+    "id": "item-55",
+    "title": "iPhone 15 Pro 256 ГБ",
+    "description": "Смартфон Apple iPhone 15 Pro, 256 ГБ, цвет Blue Titanium. Полный комплект с коробкой, на гарантии.",
+    "price": 68000,
+    "categoryId": "electronics",
+    "condition": 8,
+    "trustRating": 87,
+    "shopId": "shop-2",
+    "images": ["/images/placeholder.webp"],
+    "status": "active",
+    "createdAt": "2026-04-09T16:00:00Z",
+    "timeline": [
+      { "date": "2026-04-07T16:00:00Z", "title": "Принято ломбардом", "description": "Устройство принято на комиссию", "status": "completed" },
+      { "date": "2026-04-08T16:00:00Z", "title": "Проверено техническим специалистом", "description": "Аккумулятор 93%, оригинальный экран", "status": "completed" },
+      { "date": "2026-04-09T16:00:00Z", "title": "Выставлено на продажу", "description": "Товар доступен для покупки", "status": "current" }
+    ]
+  }
+]
