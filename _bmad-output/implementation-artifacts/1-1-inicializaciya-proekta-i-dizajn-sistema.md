@@ -1,6 +1,6 @@
 # Story 1.1: Инициализация проекта и дизайн-система
 
-Status: review
+Status: done
 
 ## Story
 
@@ -294,3 +294,36 @@ GLM-5
 - `.husky/pre-commit` — created (lint-staged hook)
 - `components.json` — created by shadcn CLI
 - `public/mockServiceWorker.js` — created by MSW CLI
+
+### Review Findings
+
+**Decision-needed (resolved):**
+
+- [x] [Review][Decision] В BottomNav отсутствует пункт "Главная" (AC7) — Решено: добавить "Главная"
+- [x] [Review][Decision] shadcn стиль "base-nova" вместо "New York" — Решено: оставить base-nova
+- [x] [Review][Decision] Отсутствуют типографские токены H1-H3, Body, Caption, Price (AC4) — Решено: добавить сейчас
+- [x] [Review][Decision] Border radius не соответствует спецификации (AC4) — Решено: исправить токены
+- [x] [Review][Decision] Secondary button не соответствует "border primary" (AC5) — Решено: исправить кнопку
+- [x] [Review][Decision] Touch target 44x44px не гарантирован для кнопок (AC5) — Решено: исправить сейчас
+- [x] [Review][Decision] Toast заменён на Sonner (AC3) — Решено: обновить спецификацию (оставить sonner)
+
+**Patch (fixed):**
+
+- [x] [Review][Patch] Отсутствует ThemeProvider при использовании useTheme() [providers.tsx, sonner.tsx] — Добавлен ThemeProvider из next-themes
+- [x] [Review][Patch] Wildcard hostname для удалённых изображений [next.config.ts:7-11] — Ограничен до cdn.pawnmarket.ru
+- [x] [Review][Patch] Неверное определение активного маршрута в BottomNav [BottomNav.tsx:21] — Исправлено на точное совпадение + сегмент
+- [x] [Review][Patch] Английский "Close" в Dialog/Sheet [dialog.tsx, sheet.tsx] — Заменено на "Закрыть"
+- [x] [Review][Patch] console.error полного объекта ошибки в error.tsx [error.tsx] — Ограничено NODE_ENV === development
+- [x] [Review][Patch] error.tsx: отсутствует role="alert", aria-label, autoFocus [error.tsx] — Добавлены role="alert", autoFocus, aria-label, pb-20
+- [x] [Review][Patch] Header: отсутствует aria-label на <nav> [Header.tsx] — Добавлен aria-label="Основная навигация"
+- [x] [Review][Patch] not-found.tsx: отсутствует семантика [not-found.tsx] — Добавлен <main>, robots noindex, aria-label, pb-20
+- [x] [Review][Patch] suppressHydrationWarning на <html> [layout.tsx:29] — Добавлен
+- [x] [Review][Patch] safe-area-inset-bottom для BottomNav [BottomNav.tsx] — Добавлен env(safe-area-inset-bottom)
+
+**Defer:**
+
+- [x] [Review][Defer] ReactQueryDevtools в production-бандле [providers.tsx] — deferred, оптимизация бандла
+- [x] [Review][Defer] MSW инициализация отсутствует — deferred, будущие стори
+- [x] [Review][Defer] Отсутствует public/images/placeholder.webp — deferred, не блокирует
+- [x] [Review][Defer] tsc --noEmit через bash -c в lint-staged [package.json] — deferred, работает но неэффективно
+- [x] [Review][Defer] NEXT_PUBLIC_MSW_ENABLED потенциальная утечка в прод [env.example] — deferred, привязано к MSW init

@@ -7,9 +7,14 @@ export default function GlobalError({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
-  console.error(_error);
+  if (process.env.NODE_ENV === "development") {
+    console.error(_error);
+  }
   return (
-    <div className="flex min-h-[60vh] flex-col items-center justify-center gap-4">
+    <div
+      role="alert"
+      className="flex min-h-[60vh] flex-col items-center justify-center gap-4 pb-20 md:pb-6"
+    >
       <h1 className="text-2xl font-bold text-foreground">
         Что-то пошло не так
       </h1>
@@ -18,6 +23,8 @@ export default function GlobalError({
       </p>
       <button
         onClick={reset}
+        autoFocus
+        aria-label="Попробовать загрузить страницу снова"
         className="rounded-md bg-primary px-4 py-2 text-sm text-primary-foreground hover:bg-primary-hover transition-colors"
       >
         Попробовать снова

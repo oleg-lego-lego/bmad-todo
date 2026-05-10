@@ -44,7 +44,7 @@ story_location: _bmad-output/implementation-artifacts
 development_status:
   # Epic 1: Покупатель просматривает каталог и товары
   epic-1: in-progress
-  1-1-inicializaciya-proekta-i-dizajn-sistema: review
+  1-1-inicializaciya-proekta-i-dizajn-sistema: done
   1-2-mokovye-dannye-i-api-sloj-dlya-tovarov: backlog
   1-3-trustbadge-i-productcard: backlog
   1-4-stranica-kataloga-poisk-filtry-sortirovka: backlog

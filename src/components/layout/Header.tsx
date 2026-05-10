@@ -11,7 +11,10 @@ export function Header() {
           <Link href="/catalog" className="text-lg font-bold text-primary">
             PawnMarket
           </Link>
-          <nav className="hidden md:flex items-center gap-4">
+          <nav
+            className="hidden md:flex items-center gap-4"
+            aria-label="Основная навигация"
+          >
             <Link
               href="/catalog"
               className="text-sm text-foreground hover:text-primary transition-colors"
