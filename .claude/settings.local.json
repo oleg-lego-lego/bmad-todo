@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat >> *)",
+      "Bash(python3 /Users/oleg/Documents/b-mad/simple-todo-todo/_bmad/scripts/resolve_customization.py --skill /Users/oleg/Documents/b-mad/simple-todo-todo/.claude/skills/bmad-check-implementation-readiness --key workflow)"
+    ],
+    "additionalDirectories": [
+      "/Users/oleg/Documents/b-mad/simple-todo-todo/_bmad-output/planning-artifacts"
+    ]
+  }
+}
