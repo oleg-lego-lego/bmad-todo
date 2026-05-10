@@ -1,6 +1,6 @@
 # Story 1.2: Моковые данные и API-слой для товаров
 
-Status: review
+Status: done
 
 ## Story
 
@@ -538,6 +538,19 @@ GLM-5
 - src/mocks/data/categories.json (NEW)
 - src/app/providers.tsx (MODIFIED)
 - src/app/catalog/page.tsx (MODIFIED)
+
+### Review Findings
+
+- [x] [Review][Patch] MSW init без обработки ошибок — `providers.tsx:26-33` — dynamic import и worker.start() без .catch(). Если MSW не загрузится — белый экран без диагностики. ✅ Fixed
+- [x] [Review][Patch] Falsy guard в getItems пропускает `page=0`, `limit=0`, `priceMin=0` — `api/items.ts:7-8` — использовать `!= null` вместо truthiness. ✅ Fixed
+- [x] [Review][Patch] ThemeProvider принимает `attribute` и `enableSystem` но не использует — `theme-provider.tsx:40-41` — убрать мёртвые пропы из типа. ✅ Fixed
+- [x] [Review][Patch] formatDate бросает RangeError на невалидном вводе — `format-date.ts:7-8` — добавить валидацию или fallback. ✅ Fixed
+- [x] [Review][Patch] parseErrorResponse глушит JSON parse ошибки — `client.ts:37-39` — SyntaxError от response.json() теряется за generic network error, затрудняя отладку. ✅ Fixed
+- [x] [Review][Defer] categoryId содержит slug вместо ID — `items.json` + `handlers/items.ts:22` — работает корректно, но модель данных несогласована. Deferred: моки будут заменены реальным API.
+- [x] [Review][Defer] apiFetch/apiFetchPaginated дублирование — `client.ts:43-87` — дублирование fetch + error handling логики. Deferred: работает корректно, рефактор при появлении реального API.
+- [x] [Review][Defer] mswReady hydration flash — `providers.tsx:22-24` — SSR рендерит null при MSW enabled. Deferred: MSW dev-only, стандартный паттерн Next.js.
+- [x] [Review][Defer] ThemeProvider SSR localStorage mismatch — `theme-provider.tsx:43-48` — сервер инициализирует defaultTheme, клиент может читать из localStorage. Deferred: стандартный паттерн, не влияет на UX.
+- [x] [Review][Defer] MSW handlers: нет валидации page/limit/price/condition bounds — `handlers/items.ts:10-35` — mock-only код. Deferred: будет заменён реальным API с серверной валидацией.
 
 ## Change Log
 

@@ -36,7 +36,8 @@ async function parseErrorResponse(response: Response): Promise<never> {
     );
   } catch (e) {
     if (e instanceof AppError) throw e;
-    throw new AppError('network', `HTTP ${response.status}: ${response.statusText}`);
+    const reason = e instanceof SyntaxError ? `Invalid JSON: ${e.message}` : String(e);
+    throw new AppError('network', `HTTP ${response.status}: ${response.statusText} — ${reason}`);
   }
 }
 

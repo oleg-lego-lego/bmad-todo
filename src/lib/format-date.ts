@@ -5,5 +5,7 @@ const formatter = new Intl.DateTimeFormat('ru-RU', {
 });
 
 export function formatDate(date: string | Date): string {
-  return formatter.format(new Date(date));
+  const d = new Date(date);
+  if (isNaN(d.getTime())) return '';
+  return formatter.format(d);
 }

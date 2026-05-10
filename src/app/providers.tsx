@@ -25,11 +25,16 @@ export function Providers({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     if (process.env.NEXT_PUBLIC_MSW_ENABLED === "true") {
-      import("@/mocks/browser").then(({ worker }) => {
-        worker.start({ onUnhandledRequest: "bypass" }).then(() => {
+      import("@/mocks/browser")
+        .then(({ worker }) =>
+          worker.start({ onUnhandledRequest: "bypass" }).then(() => {
+            setMswReady(true);
+          })
+        )
+        .catch((err) => {
+          console.error("MSW init failed:", err);
           setMswReady(true);
         });
-      });
     }
   }, []);
 
@@ -39,7 +44,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider defaultTheme="light" enableSystem>
+      <ThemeProvider defaultTheme="light">
         {children}
         <Toaster />
       </ThemeProvider>

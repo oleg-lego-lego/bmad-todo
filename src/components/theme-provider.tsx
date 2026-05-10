@@ -37,8 +37,6 @@ export function ThemeProvider({
 }: {
   children: React.ReactNode;
   defaultTheme?: string;
-  attribute?: string;
-  enableSystem?: boolean;
 }) {
   const [theme, setTheme] = useState<Theme>(
     () =>
