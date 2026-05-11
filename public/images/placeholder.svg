@@ -1,0 +1,7 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#F1F5F9"/>
+  <rect x="160" y="100" width="80" height="60" rx="4" fill="#CBD5E1"/>
+  <path d="M160 155 L190 120 L210 140 L230 115 L240 130 L240 155 Z" fill="#94A3B8"/>
+  <circle cx="180" cy="115" r="10" fill="#94A3B8"/>
+  <text x="200" y="190" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="14">Нет фото</text>
+</svg>

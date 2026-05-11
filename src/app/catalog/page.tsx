@@ -1,19 +1,43 @@
-"use client";
+'use client';
 
-import { PageContainer } from "@/components/layout/PageContainer";
-import { useItems } from "@/hooks/use-items";
-import { useCategories } from "@/hooks/use-categories";
-import { formatPrice } from "@/lib/format-price";
+import { useMemo } from 'react';
+import { PageContainer } from '@/components/layout/PageContainer';
+import { ProductCard, ProductCardSkeleton } from '@/components/shared/ProductCard';
+import { useItems } from '@/hooks/use-items';
+import { useShops } from '@/hooks/use-shops';
+import type { Shop } from '@/types/shop';
+
+function pluralize(n: number, forms: [string, string, string]): string {
+  const abs = Math.abs(n) % 100;
+  const last = abs % 10;
+  if (abs > 10 && abs < 20) return forms[2];
+  if (last > 1 && last < 5) return forms[1];
+  if (last === 1) return forms[0];
+  return forms[2];
+}
 
 export default function CatalogPage() {
   const { data: itemsResponse, isLoading: itemsLoading, error: itemsError } = useItems();
-  const { data: categories, isLoading: catLoading } = useCategories();
+  const { data: shops, isLoading: shopsLoading } = useShops();
 
-  if (itemsLoading || catLoading) {
+  const shopsMap = useMemo(() => {
+    if (!shops) return new Map<string, Shop>();
+    return new Map(shops.map((s) => [s.id, s]));
+  }, [shops]);
+
+  const items = itemsResponse?.data ?? [];
+  const meta = itemsResponse?.meta;
+  const isLoading = itemsLoading || shopsLoading;
+
+  if (isLoading) {
     return (
       <PageContainer>
-        <h1 className="text-2xl font-bold text-foreground mb-4">Каталог</h1>
-        <p className="text-muted-foreground">Загрузка...</p>
+        <h1 className="text-h1 font-bold text-foreground mb-4">Каталог</h1>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+          {Array.from({ length: 8 }).map((_, i) => (
+            <ProductCardSkeleton key={i} />
+          ))}
+        </div>
       </PageContainer>
     );
   }
@@ -21,41 +45,44 @@ export default function CatalogPage() {
   if (itemsError) {
     return (
       <PageContainer>
-        <h1 className="text-2xl font-bold text-foreground mb-4">Каталог</h1>
+        <h1 className="text-h1 font-bold text-foreground mb-4">Каталог</h1>
         <p className="text-red-500">Ошибка: {itemsError.message}</p>
       </PageContainer>
     );
   }
 
-  const items = itemsResponse?.data ?? [];
-  const meta = itemsResponse?.meta;
+  if (items.length === 0) {
+    return (
+      <PageContainer>
+        <h1 className="text-h1 font-bold text-foreground mb-4">Каталог</h1>
+        <div className="flex flex-col items-center gap-4 py-12">
+          <p className="text-body text-secondary">Товары не найдены</p>
+          <button
+            type="button"
+            className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary-hover transition-colors"
+          >
+            Перейти в каталог
+          </button>
+        </div>
+      </PageContainer>
+    );
+  }
 
   return (
     <PageContainer>
-      <h1 className="text-2xl font-bold text-foreground mb-4">Каталог</h1>
-
-      <div className="mb-4 text-sm text-muted-foreground">
-        Категории: {categories?.map((c) => c.name).join(", ")}
-        {meta && ` | Товаров: ${meta.total} (стр. ${meta.page}/${meta.totalPages})`}
+      <div className="mb-4 flex items-center justify-between">
+        <h1 className="text-h1 font-bold text-foreground">Каталог</h1>
+        {meta && (
+          <span className="text-caption text-secondary">
+            {meta.total}{' '}
+            {pluralize(meta.total, ['товар', 'товара', 'товаров'])}
+          </span>
+        )}
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
         {items.map((item) => (
-          <div
-            key={item.id}
-            className="border rounded-lg p-4 bg-card text-card-foreground"
-          >
-            <h3 className="font-semibold text-sm mb-1 line-clamp-2">
-              {item.title}
-            </h3>
-            <p className="text-lg font-bold text-primary mb-1">
-              {formatPrice(item.price)}
-            </p>
-            <div className="flex gap-2 text-xs text-muted-foreground">
-              <span>Состояние: {item.condition}/10</span>
-              <span>Доверие: {item.trustRating}%</span>
-            </div>
-          </div>
+          <ProductCard key={item.id} item={item} shop={shopsMap.get(item.shopId)} />
         ))}
       </div>
     </PageContainer>

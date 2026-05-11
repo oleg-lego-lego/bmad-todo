@@ -15,3 +15,9 @@
 - mswReady hydration flash — MSW dev-only, стандартный паттерн Next.js
 - ThemeProvider SSR localStorage mismatch — стандартный паттерн, не влияет на UX
 - MSW handlers: нет валидации page/limit/price/condition bounds — mock-only, будет заменено реальным API
+
+## Deferred from: code review of 1-3-trustbadge-i-productcard (2026-05-11)
+
+- MSW shops.json `as Shop[]` без валидации — наследуемый паттерн из items.ts, mock-only
+- formatPrice не обрабатывает отрицательные цены — предсуществующий код, не относится к текущей story
+- ProductCard imgError не сбрасывается при смене item — key={item.id} смягчает, минимальный риск
