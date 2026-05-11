@@ -17,6 +17,13 @@ export function SearchBar() {
     setDraft(externalSearch); // eslint-disable-line react-hooks/set-state-in-effect -- legitimate sync from URL to local input state
   }, [externalSearch]);
 
+  // Clear debounce timer on unmount
+  useEffect(() => {
+    return () => {
+      if (debounceRef.current) clearTimeout(debounceRef.current);
+    };
+  }, []);
+
   const handleChange = useCallback(
     (value: string) => {
       setDraft(value);
@@ -48,14 +55,14 @@ export function SearchBar() {
         onChange={(e) => handleChange(e.target.value)}
         placeholder="Поиск товаров..."
         aria-label="Поиск товаров"
-        className="flex h-8 w-full rounded-lg border border-input bg-transparent px-9 py-1 text-sm transition-colors outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50"
+        className="flex h-11 w-full rounded-lg border border-input bg-transparent px-9 py-1 text-sm transition-colors outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50"
       />
       {draft && (
         <button
           type="button"
           onClick={handleClear}
           aria-label="Очистить поиск"
-          className="absolute right-2.5 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+          className="absolute right-1 top-1/2 -translate-y-1/2 flex items-center justify-center size-8 text-muted-foreground hover:text-foreground transition-colors"
         >
           <X className="size-4" />
         </button>

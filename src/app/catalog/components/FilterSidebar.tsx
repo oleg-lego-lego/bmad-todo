@@ -1,5 +1,6 @@
 'use client';
 
+import { useRef, useCallback } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
@@ -12,20 +13,33 @@ const CONDITION_OPTIONS = [
   { value: 1, label: 'Удовл. (1-4)' },
 ];
 
+const DEBOUNCE_MS = 300;
+
 export function FilterSidebar() {
   const { filters, setFilter, clearFilters, activeFilterCount } = useFilters();
   const { data: categories } = useCategories();
+  const debounceRef = useRef<ReturnType<typeof setTimeout>>(undefined);
+
+  const debouncedSetFilter = useCallback(
+    (key: string, value: string | number | undefined) => {
+      if (debounceRef.current) clearTimeout(debounceRef.current);
+      debounceRef.current = setTimeout(() => {
+        setFilter(key, value);
+      }, DEBOUNCE_MS);
+    },
+    [setFilter],
+  );
 
   const handlePriceMinChange = (value: string) => {
     const num = value === '' ? undefined : Number(value);
     if (num !== undefined && num < 0) return;
-    setFilter('priceMin', num);
+    debouncedSetFilter('priceMin', num);
   };
 
   const handlePriceMaxChange = (value: string) => {
     const num = value === '' ? undefined : Number(value);
     if (num !== undefined && num < 0) return;
-    setFilter('priceMax', num);
+    debouncedSetFilter('priceMax', num);
   };
 
   return (
@@ -51,7 +65,7 @@ export function FilterSidebar() {
             {categories?.map((cat) => (
               <label
                 key={cat.id}
-                className="flex items-center gap-2 text-sm cursor-pointer"
+                className="flex items-center gap-2 text-sm cursor-pointer min-h-[44px]"
               >
                 <input
                   type="radio"
@@ -74,7 +88,7 @@ export function FilterSidebar() {
               <button
                 type="button"
                 onClick={() => setFilter('category', undefined)}
-                className="text-xs text-primary hover:underline"
+                className="text-xs text-primary hover:underline min-h-[44px] flex items-center"
               >
                 Сбросить
               </button>
@@ -97,7 +111,7 @@ export function FilterSidebar() {
               onChange={(e) => handlePriceMinChange(e.target.value)}
               aria-label="Минимальная цена"
               min={0}
-              className="h-8 text-sm"
+              className="h-11 text-sm"
             />
             <span className="text-muted-foreground">—</span>
             <Input
@@ -107,7 +121,7 @@ export function FilterSidebar() {
               onChange={(e) => handlePriceMaxChange(e.target.value)}
               aria-label="Максимальная цена"
               min={0}
-              className="h-8 text-sm"
+              className="h-11 text-sm"
             />
           </div>
         </fieldset>
@@ -123,7 +137,7 @@ export function FilterSidebar() {
             {CONDITION_OPTIONS.map((opt) => (
               <label
                 key={opt.value}
-                className="flex items-center gap-2 text-sm cursor-pointer"
+                className="flex items-center gap-2 text-sm cursor-pointer min-h-[44px]"
               >
                 <input
                   type="radio"

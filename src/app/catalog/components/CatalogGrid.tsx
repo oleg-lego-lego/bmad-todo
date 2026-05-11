@@ -10,9 +10,10 @@ import type { Shop } from '@/types/shop';
 
 interface CatalogGridProps {
   filters: ItemFilters;
+  onTotalCount?: (count: number) => void;
 }
 
-export function CatalogGrid({ filters }: CatalogGridProps) {
+export function CatalogGrid({ filters, onTotalCount }: CatalogGridProps) {
   const {
     data,
     isLoading,
@@ -21,6 +22,12 @@ export function CatalogGrid({ filters }: CatalogGridProps) {
     hasNextPage,
     isFetchingNextPage,
   } = useItemsInfinite(filters);
+
+  const totalCount = data?.pages[0]?.meta?.total ?? 0;
+
+  useEffect(() => {
+    onTotalCount?.(totalCount);
+  }, [totalCount, onTotalCount]);
 
   const { data: shops } = useShops();
   const loadMoreRef = useRef<HTMLDivElement>(null);

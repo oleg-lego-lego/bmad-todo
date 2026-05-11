@@ -1,6 +1,6 @@
 # Story 1.4: Страница каталога — поиск, фильтры, сортировка
 
-Status: review
+Status: done
 
 ## Story
 
@@ -244,3 +244,37 @@ GLM-5[1m]
 
 - 2026-05-11: Story created from epics, architecture, PRD, UX, and previous story analysis
 - 2026-05-11: Story implemented — all 10 tasks complete, 25 tests passing, build clean
+- 2026-05-11: Code review chunk 1 (hooks & config)
+
+### Review Findings (Chunk 1 — Hooks & Config)
+
+- [x] [Review][Decision] SortSelect default state — resolved: set `sort=date` in URL on first visit via useEffect
+- [x] [Review][Decision] Condition filter buckets — resolved: keep 3 buckets as-is, covers main use cases
+- [x] [Review][Patch] NaN from non-numeric URL params [use-filters.ts] — added `toNumber()` helper with isNaN guard
+- [x] [Review][Patch] setFilter treats value 0 as "clear filter" [use-filters.ts] — removed `value === 0` check
+- [x] [Review][Patch] Unsafe `as SortValue` type assertion [use-filters.ts] — added VALID_SORT_VALUES validation
+- [x] [Review][Patch] Type-unsafe `infinite: true` in query key [use-items.ts] — added `infiniteList` key factory
+- [x] [Review][Defer] No validation that priceMin <= priceMax [use-filters.ts] — deferred, pre-existing
+
+### Review Findings (Chunk 2 — Components)
+
+- [x] [Review][Decision] Touch targets 44px на desktop — resolved: добавлены min-h-[44px] и h-11 везде
+- [x] [Review][Patch] SearchBar debounce timer не очищался при unmount [SearchBar.tsx] — добавлен cleanup effect
+- [x] [Review][Patch] FilterSheet price inputs без валидации отрицательных значений [FilterSheet.tsx] — добавлена проверка num < 0
+- [x] [Review][Patch] Price inputs без debounce [FilterSheet.tsx, FilterSidebar.tsx] — добавлен 300ms debounce для price inputs
+- [x] [Review][Patch] SearchBar clear button без touch target [SearchBar.tsx] — добавлен size-8 flex контейнер
+- [x] [Review][Patch] Отсутствует h1 на странице каталога [page.tsx] — добавлен `<h1>Каталог</h1>`
+- [x] [Review][Patch] Suspense без fallback [page.tsx] — добавлен skeleton fallback
+- [x] [Review][Patch] Desktop toolbar layout не по спеке [page.tsx] — SearchBar, SortSelect, FilterSheet в одну строку
+- [x] [Review][Decision] SSR vs client-side — resolved: оставлен 'use client' на моках, SSR при подключении реального API
+- [x] [Review][Patch] Duplicate useItemsInfinite убран [page.tsx] — CatalogGrid теперь отдаёт totalCount через onTotalCount callback
+
+### Review Findings (Chunk 4 — Tests)
+
+- [x] [Review][Patch] CatalogGrid 2 no-op теста удалены [CatalogGrid.test.tsx] — vi.doMock не работал со static import
+- [x] [Review][Patch] SearchBar mockSearchParams.delete('') фиксирован [SearchBar.test.tsx] — правильная очистка через итерацию
+- [x] [Review][Patch] SortSelect тесты созданы [SortSelect.test.tsx]
+- [x] [Review][Patch] FilterSheet тесты созданы [FilterSheet.test.tsx]
+- [x] [Review][Patch] CatalogGrid loading/error/empty state тесты созданы [CatalogGrid.test.tsx]
+- [x] [Review][Patch] Invalid sort + NaN price тесты добавлены [use-filters.test.ts]
+- [x] [Review][Patch] Price range min>max валидация добавлена [use-filters.ts]

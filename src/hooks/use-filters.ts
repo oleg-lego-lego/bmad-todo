@@ -1,15 +1,35 @@
 'use client';
 
-import { useCallback, useMemo } from 'react';
+import { useCallback, useEffect, useMemo, useRef } from 'react';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import type { ItemFilters } from '@/types/item';
 
-type SortValue = ItemFilters['sort'];
+const VALID_SORT_VALUES: readonly string[] = ['price_asc', 'price_desc', 'date', 'trust_rating'];
+const DEFAULT_SORT = 'date';
+
+function toNumber(value: string | null): number | undefined {
+  if (!value) return undefined;
+  const n = Number(value);
+  return Number.isNaN(n) ? undefined : n;
+}
 
 export function useFilters() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
+  const initialized = useRef(false);
+
+  // Set default sort in URL on first visit
+  useEffect(() => {
+    if (initialized.current) return;
+    initialized.current = true;
+    if (!searchParams.has('sort')) {
+      const params = new URLSearchParams(searchParams.toString());
+      params.set('sort', DEFAULT_SORT);
+      router.replace(`${pathname}?${params.toString()}`, { scroll: false });
+    }
+   
+  }, []);
 
   const filters: ItemFilters = useMemo(() => {
     const result: ItemFilters = {};
@@ -20,17 +40,21 @@ export function useFilters() {
     const category = searchParams.get('category');
     if (category) result.category = category;
 
-    const priceMin = searchParams.get('priceMin');
-    if (priceMin) result.priceMin = Number(priceMin);
+    const priceMin = toNumber(searchParams.get('priceMin'));
+    if (priceMin !== undefined) result.priceMin = priceMin;
 
-    const priceMax = searchParams.get('priceMax');
-    if (priceMax) result.priceMax = Number(priceMax);
+    const priceMax = toNumber(searchParams.get('priceMax'));
+    if (priceMax !== undefined) result.priceMax = priceMax;
 
-    const condition = searchParams.get('condition');
-    if (condition) result.condition = Number(condition);
+    const condition = toNumber(searchParams.get('condition'));
+    if (condition !== undefined) result.condition = condition;
 
-    const sort = searchParams.get('sort') as SortValue;
-    if (sort) result.sort = sort;
+    const sortRaw = searchParams.get('sort');
+    if (sortRaw && VALID_SORT_VALUES.includes(sortRaw)) {
+      result.sort = sortRaw as ItemFilters['sort'];
+    } else {
+      result.sort = DEFAULT_SORT;
+    }
 
     return result;
   }, [searchParams]);
@@ -39,10 +63,18 @@ export function useFilters() {
     (key: string, value: string | number | undefined) => {
       const params = new URLSearchParams(searchParams.toString());
 
-      if (value === undefined || value === '' || value === 0) {
+      if (value === undefined || value === '') {
         params.delete(key);
       } else {
         params.set(key, String(value));
+      }
+
+      // Validate price range: clear priceMax if priceMin exceeds it
+      if (key === 'priceMin' && value !== undefined && value !== '') {
+        const currentMax = Number(params.get('priceMax'));
+        if (!Number.isNaN(currentMax) && Number(value) > currentMax) {
+          params.delete('priceMax');
+        }
       }
 
       router.replace(`${pathname}?${params.toString()}`, { scroll: false });
@@ -60,8 +92,7 @@ export function useFilters() {
       searchParams.has('category') ||
       searchParams.has('priceMin') ||
       searchParams.has('priceMax') ||
-      searchParams.has('condition') ||
-      searchParams.has('sort')
+      searchParams.has('condition')
     );
   }, [searchParams]);
 
@@ -71,7 +102,6 @@ export function useFilters() {
     if (searchParams.has('category')) count++;
     if (searchParams.has('priceMin') || searchParams.has('priceMax')) count++;
     if (searchParams.has('condition')) count++;
-    // sort is not counted as a "filter"
     return count;
   }, [searchParams]);
 

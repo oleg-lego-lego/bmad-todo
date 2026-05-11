@@ -7,6 +7,8 @@ export const itemKeys = {
   all: ['items'] as const,
   lists: () => [...itemKeys.all, 'list'] as const,
   list: (filters: ItemFilters) => [...itemKeys.lists(), filters] as const,
+  infiniteList: (filters: Omit<ItemFilters, 'page'>) =>
+    [...itemKeys.lists(), 'infinite', filters] as const,
   details: () => [...itemKeys.all, 'detail'] as const,
   detail: (id: string) => [...itemKeys.details(), id] as const,
 };
@@ -32,7 +34,7 @@ export function useItemsInfinite(filters?: ItemFilters) {
   };
 
   return useInfiniteQuery({
-    queryKey: itemKeys.list({ ...baseFilters, infinite: true } as ItemFilters),
+    queryKey: itemKeys.infiniteList(baseFilters),
     queryFn: ({ pageParam }) =>
       getItems({ ...baseFilters, page: pageParam }),
     initialPageParam: 1,

@@ -1,6 +1,6 @@
 'use client';
 
-import { Suspense } from 'react';
+import { Suspense, useState, useCallback } from 'react';
 import { PageContainer } from '@/components/layout/PageContainer';
 import { SearchBar } from './components/SearchBar';
 import { SortSelect } from './components/SortSelect';
@@ -9,7 +9,6 @@ import { FilterSheet } from './components/FilterSheet';
 import { CatalogGrid } from './components/CatalogGrid';
 import { Breadcrumbs } from './components/Breadcrumbs';
 import { useFilters } from '@/hooks/use-filters';
-import { useItemsInfinite } from '@/hooks/use-items';
 
 function pluralize(n: number, forms: [string, string, string]): string {
   const abs = Math.abs(n) % 100;
@@ -22,26 +21,25 @@ function pluralize(n: number, forms: [string, string, string]): string {
 
 function CatalogContent() {
   const { filters } = useFilters();
-  const { data } = useItemsInfinite(filters);
-  const totalCount = data?.pages[0]?.meta?.total ?? 0;
+  const [totalCount, setTotalCount] = useState(0);
+  const handleTotalCount = useCallback((count: number) => setTotalCount(count), []);
 
   return (
     <PageContainer>
       <Breadcrumbs />
 
+      <h1 className="text-h1 font-bold text-foreground mb-4">Каталог</h1>
+
       {/* Toolbar */}
-      <div className="mb-4 space-y-3">
+      <div className="mb-4">
         <div className="flex items-center gap-3">
           <div className="flex-1">
             <SearchBar />
           </div>
-        </div>
-
-        <div className="flex items-center gap-3">
-          <FilterSheet />
           <SortSelect />
+          <FilterSheet />
           {totalCount > 0 && (
-            <span className="text-sm text-muted-foreground ml-auto">
+            <span className="text-sm text-muted-foreground">
               {totalCount}{' '}
               {pluralize(totalCount, ['товар', 'товара', 'товаров'])}
             </span>
@@ -53,7 +51,7 @@ function CatalogContent() {
       <div className="flex gap-6">
         <FilterSidebar />
         <div className="flex-1 min-w-0">
-          <CatalogGrid filters={filters} />
+          <CatalogGrid filters={filters} onTotalCount={handleTotalCount} />
         </div>
       </div>
     </PageContainer>
@@ -62,7 +60,19 @@ function CatalogContent() {
 
 export default function CatalogPage() {
   return (
-    <Suspense>
+    <Suspense
+      fallback={
+        <PageContainer>
+          <div className="mb-4 h-6 w-32 animate-pulse rounded bg-muted" />
+          <div className="mb-4 h-9 animate-pulse rounded bg-muted" />
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <div key={i} className="h-64 animate-pulse rounded-lg bg-muted" />
+            ))}
+          </div>
+        </PageContainer>
+      }
+    >
       <CatalogContent />
     </Suspense>
   );

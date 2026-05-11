@@ -1,5 +1,6 @@
 'use client';
 
+import { useRef, useCallback } from 'react';
 import { SlidersHorizontal } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -23,9 +24,34 @@ const CONDITION_OPTIONS = [
   { value: 1, label: 'Удовл. (1-4)' },
 ];
 
+const DEBOUNCE_MS = 300;
+
 export function FilterSheet() {
   const { filters, setFilter, clearFilters, activeFilterCount } = useFilters();
   const { data: categories } = useCategories();
+  const debounceRef = useRef<ReturnType<typeof setTimeout>>(undefined);
+
+  const debouncedSetFilter = useCallback(
+    (key: string, value: string | number | undefined) => {
+      if (debounceRef.current) clearTimeout(debounceRef.current);
+      debounceRef.current = setTimeout(() => {
+        setFilter(key, value);
+      }, DEBOUNCE_MS);
+    },
+    [setFilter],
+  );
+
+  const handlePriceMinChange = (value: string) => {
+    const num = value === '' ? undefined : Number(value);
+    if (num !== undefined && num < 0) return;
+    debouncedSetFilter('priceMin', num);
+  };
+
+  const handlePriceMaxChange = (value: string) => {
+    const num = value === '' ? undefined : Number(value);
+    if (num !== undefined && num < 0) return;
+    debouncedSetFilter('priceMax', num);
+  };
 
   return (
     <Sheet>
@@ -101,10 +127,7 @@ export function FilterSheet() {
                 type="number"
                 placeholder="от"
                 value={filters.priceMin ?? ''}
-                onChange={(e) => {
-                  const v = e.target.value;
-                  setFilter('priceMin', v === '' ? undefined : Number(v));
-                }}
+                onChange={(e) => handlePriceMinChange(e.target.value)}
                 aria-label="Минимальная цена"
                 min={0}
                 className="h-11 text-base"
@@ -114,10 +137,7 @@ export function FilterSheet() {
                 type="number"
                 placeholder="до"
                 value={filters.priceMax ?? ''}
-                onChange={(e) => {
-                  const v = e.target.value;
-                  setFilter('priceMax', v === '' ? undefined : Number(v));
-                }}
+                onChange={(e) => handlePriceMaxChange(e.target.value)}
                 aria-label="Максимальная цена"
                 min={0}
                 className="h-11 text-base"

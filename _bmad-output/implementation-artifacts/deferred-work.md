@@ -21,3 +21,7 @@
 - MSW shops.json `as Shop[]` без валидации — наследуемый паттерн из items.ts, mock-only
 - formatPrice не обрабатывает отрицательные цены — предсуществующий код, не относится к текущей story
 - ProductCard imgError не сбрасывается при смене item — key={item.id} смягчает, минимальный риск
+
+## Deferred from: code review of 1-4-stranica-kataloga-poisk-filtry-sortirovka (2026-05-11)
+
+- No validation that priceMin <= priceMax — nice-to-have, not specified in ACs, API returns empty results for invalid range

@@ -31,9 +31,9 @@ describe('useFilters', () => {
     clearSearchParams();
   });
 
-  it('returns empty filters when no URL params', () => {
+  it('returns default sort when no URL params', () => {
     const { result } = renderHook(() => useFilters());
-    expect(result.current.filters).toEqual({});
+    expect(result.current.filters).toEqual({ sort: 'date' });
     expect(result.current.hasActiveFilters).toBe(false);
     expect(result.current.activeFilterCount).toBe(0);
   });
@@ -74,7 +74,7 @@ describe('useFilters', () => {
   });
 
   it('setFilter removes param when value is undefined', () => {
-    setSearchParams({ search: 'test' });
+    setSearchParams({ search: 'test', sort: 'date' });
 
     const { result } = renderHook(() => useFilters());
 
@@ -83,8 +83,8 @@ describe('useFilters', () => {
     });
 
     expect(mockReplace).toHaveBeenCalled();
-    const calledUrl = mockReplace.mock.calls[0][0] as string;
-    expect(calledUrl).not.toContain('search=');
+    const lastCall = mockReplace.mock.calls[mockReplace.mock.calls.length - 1][0] as string;
+    expect(lastCall).not.toContain('search=');
   });
 
   it('clearFilters removes all params', () => {
@@ -123,6 +123,20 @@ describe('useFilters', () => {
 
     const { result } = renderHook(() => useFilters());
     expect(result.current.activeFilterCount).toBe(0);
-    expect(result.current.hasActiveFilters).toBe(true);
+    expect(result.current.hasActiveFilters).toBe(false);
+  });
+
+  it('falls back to default sort for invalid sort value', () => {
+    setSearchParams({ sort: 'invalid_value' });
+
+    const { result } = renderHook(() => useFilters());
+    expect(result.current.filters.sort).toBe('date');
+  });
+
+  it('ignores non-numeric priceMin', () => {
+    setSearchParams({ priceMin: 'abc' });
+
+    const { result } = renderHook(() => useFilters());
+    expect(result.current.filters.priceMin).toBeUndefined();
   });
 });

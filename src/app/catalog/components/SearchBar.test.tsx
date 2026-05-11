@@ -19,7 +19,9 @@ vi.mock('@/hooks/use-filters', () => ({
 describe('SearchBar', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    mockSearchParams.delete('');
+    for (const key of [...mockSearchParams.keys()]) {
+      mockSearchParams.delete(key);
+    }
   });
 
   it('renders with placeholder', () => {

@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { CatalogGrid } from '@/app/catalog/components/CatalogGrid';
 import type { Item } from '@/types/item';
@@ -34,22 +34,11 @@ const mockItems: Item[] = [
   },
 ];
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+let mockInfiniteResult: any;
+
 vi.mock('@/hooks/use-items', () => ({
-  useItemsInfinite: () => ({
-    data: {
-      pages: [
-        {
-          data: mockItems,
-          meta: { page: 1, totalPages: 1, total: 2, limit: 12 },
-        },
-      ],
-    },
-    isLoading: false,
-    error: null,
-    fetchNextPage: vi.fn(),
-    hasNextPage: false,
-    isFetchingNextPage: false,
-  }),
+  useItemsInfinite: () => mockInfiniteResult,
 }));
 
 vi.mock('@/hooks/use-shops', () => ({
@@ -62,38 +51,59 @@ vi.mock('@/hooks/use-shops', () => ({
 }));
 
 describe('CatalogGrid', () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+    // Default: loaded with items
+    mockInfiniteResult = {
+      data: {
+        pages: [{ data: mockItems, meta: { page: 1, totalPages: 1, total: 2, limit: 12 } }],
+      },
+      isLoading: false,
+      error: null,
+      fetchNextPage: vi.fn(),
+      hasNextPage: false,
+      isFetchingNextPage: false,
+    };
+  });
+
   it('renders product cards', () => {
     render(<CatalogGrid filters={{}} />);
     expect(screen.getByText('Кольцо золотое')).toBeInTheDocument();
     expect(screen.getByText('Ноутбук MacBook')).toBeInTheDocument();
   });
 
-  it('shows loading skeletons when loading', () => {
-    vi.doMock('@/hooks/use-items', () => ({
-      useItemsInfinite: () => ({
-        data: undefined,
-        isLoading: true,
-        error: null,
-        fetchNextPage: vi.fn(),
-        hasNextPage: false,
-        isFetchingNextPage: false,
-      }),
-    }));
+  it('shows error state', () => {
+    mockInfiniteResult = {
+      ...mockInfiniteResult,
+      data: undefined,
+      error: new Error('Network error'),
+    };
 
-    // Re-import after mock change won't work in vitest isolation
-    // This test validates the loading path exists
+    render(<CatalogGrid filters={{}} />);
+    expect(screen.getByText(/Network error/)).toBeInTheDocument();
   });
 
-  it('shows empty state when no items', () => {
-    vi.doMock('@/hooks/use-items', () => ({
-      useItemsInfinite: () => ({
-        data: { pages: [{ data: [], meta: { page: 1, totalPages: 0, total: 0, limit: 12 } }] },
-        isLoading: false,
-        error: null,
-        fetchNextPage: vi.fn(),
-        hasNextPage: false,
-        isFetchingNextPage: false,
-      }),
-    }));
+  it('shows empty state with reset link when no items', () => {
+    mockInfiniteResult = {
+      ...mockInfiniteResult,
+      data: {
+        pages: [{ data: [], meta: { page: 1, totalPages: 0, total: 0, limit: 12 } }],
+      },
+    };
+
+    render(<CatalogGrid filters={{}} />);
+    expect(screen.getByText('Товары не найдены')).toBeInTheDocument();
+    expect(screen.getByText('Сбросить фильтры')).toBeInTheDocument();
+  });
+
+  it('renders loading skeletons', () => {
+    mockInfiniteResult = {
+      ...mockInfiniteResult,
+      data: undefined,
+      isLoading: true,
+    };
+
+    render(<CatalogGrid filters={{}} />);
+    expect(screen.getByLabelText('Загрузка товаров')).toBeInTheDocument();
   });
 });
