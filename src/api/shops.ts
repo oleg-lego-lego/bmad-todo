@@ -6,5 +6,5 @@ export function getShops(): Promise<Shop[]> {
 }
 
 export function getShopById(id: string): Promise<Shop> {
-  return apiFetch<Shop>(`/shops/${id}`);
+  return apiFetch<Shop>(`/shops/${encodeURIComponent(id)}`);
 }

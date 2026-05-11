@@ -5,19 +5,29 @@ import { PageContainer } from '@/components/layout/PageContainer';
 import { ProductCard, ProductCardSkeleton } from '@/components/shared/ProductCard';
 import { useItems } from '@/hooks/use-items';
 import { useShops } from '@/hooks/use-shops';
+import type { Shop } from '@/types/shop';
+
+function pluralize(n: number, forms: [string, string, string]): string {
+  const abs = Math.abs(n) % 100;
+  const last = abs % 10;
+  if (abs > 10 && abs < 20) return forms[2];
+  if (last > 1 && last < 5) return forms[1];
+  if (last === 1) return forms[0];
+  return forms[2];
+}
 
 export default function CatalogPage() {
   const { data: itemsResponse, isLoading: itemsLoading, error: itemsError } = useItems();
-  const { data: shops } = useShops();
+  const { data: shops, isLoading: shopsLoading } = useShops();
 
   const shopsMap = useMemo(() => {
-    if (!shops) return new Map<string, import('@/types/shop').Shop>();
+    if (!shops) return new Map<string, Shop>();
     return new Map(shops.map((s) => [s.id, s]));
   }, [shops]);
 
   const items = itemsResponse?.data ?? [];
   const meta = itemsResponse?.meta;
-  const isLoading = itemsLoading || !shops;
+  const isLoading = itemsLoading || shopsLoading;
 
   if (isLoading) {
     return (
@@ -65,11 +75,7 @@ export default function CatalogPage() {
         {meta && (
           <span className="text-caption text-secondary">
             {meta.total}{' '}
-            {meta.total === 1
-              ? 'товар'
-              : meta.total < 5
-                ? 'товара'
-                : 'товаров'}
+            {pluralize(meta.total, ['товар', 'товара', 'товаров'])}
           </span>
         )}
       </div>

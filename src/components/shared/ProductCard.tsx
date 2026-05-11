@@ -18,7 +18,7 @@ interface ProductCardProps {
 
 export function ProductCard({ item, shop, className }: ProductCardProps) {
   const [imgError, setImgError] = useState(false);
-  const imageSrc = item.images[0] || '/images/placeholder.svg';
+  const imageSrc = item.images?.[0] || '/images/placeholder.svg';
 
   return (
     <Link href={`/item/${item.id}`} className="group/block">
@@ -38,6 +38,7 @@ export function ProductCard({ item, shop, className }: ProductCardProps) {
                 height="48"
                 viewBox="0 0 48 48"
                 fill="none"
+                aria-hidden="true"
                 className="text-muted-foreground"
               >
                 <rect
@@ -82,7 +83,7 @@ export function ProductCard({ item, shop, className }: ProductCardProps) {
             {item.title}
           </h3>
           <p className="text-caption text-secondary">
-            Сост: {item.condition}/10{shop ? ` · ${shop.name}` : ''}
+            Сост: {item.condition ?? '-'}/10{shop ? ` · ${shop.name}` : ''}
           </p>
         </div>
       </article>
@@ -92,7 +93,7 @@ export function ProductCard({ item, shop, className }: ProductCardProps) {
 
 export function ProductCardSkeleton() {
   return (
-    <div className="overflow-hidden rounded-lg border border-border bg-card lg:flex lg:flex-row">
+    <div aria-busy="true" aria-label="Загрузка товара" className="overflow-hidden rounded-lg border border-border bg-card lg:flex lg:flex-row">
       {/* Image skeleton */}
       <Skeleton className="aspect-[4/3] w-full lg:w-40 lg:aspect-auto lg:h-auto lg:min-h-[120px]" />
 

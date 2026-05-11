@@ -1,6 +1,6 @@
 # Story 1.3: TrustBadge и ProductCard
 
-Status: review
+Status: done
 
 ## Story
 
@@ -399,6 +399,33 @@ GLM-5
 - src/app/catalog/page.tsx (MODIFIED)
 - public/images/placeholder.svg (NEW)
 
+## Review Findings
+
+### Decision Needed
+
+- [x] [Review][Decision] Кнопка "Перейти в каталог" — нелогичный CTA на странице каталога [catalog/page.tsx:50-54] — Оставлена как заглушка, будет подключена к сбросу фильтров в Story 1-4.
+
+### Patch
+
+- [x] [Review][Patch] Склонение «товар» некорректно для 21-24, 31-34 и т.д. [catalog/page.tsx:68-72] — Исправлено: добавлена функция pluralize().
+- [x] [Review][Patch] useShops ошибка → вечный skeleton [catalog/page.tsx:10-11] — Исправлено: деструктурирован shopsLoading, убрано !shops.
+- [x] [Review][Patch] Inline import() тип Shop вместо явного импорта [catalog/page.tsx:14] — Исправлено: добавлен import type { Shop }.
+- [x] [Review][Patch] role="status" на статичном TrustBadge [TrustBadge.tsx] — Исправлено: убран role="status", оставлен aria-label.
+- [x] [Review][Patch] TrustBadge rating без валидации — NaN и значения вне 0-100 [TrustBadge.tsx] — Исправлено: добавлен clamp через Math.max/min/round.
+- [x] [Review][Patch] getShopById не экранирует id в URL [api/shops.ts] — Исправлено: добавлен encodeURIComponent.
+- [x] [Review][Patch] ProductCard item.images без optional chaining [ProductCard.tsx:21] — Исправлено: item.images?.[0].
+- [x] [Review][Patch] ProductCardSkeleton без aria-busy [ProductCard.tsx:93-108] — Исправлено: добавлены aria-busy и aria-label.
+- [x] [Review][Patch] TrustBadge compact touch target < 44px [TrustBadge.tsx] — Исправлено: min-w-[44px] min-h-[44px], увеличен padding.
+- [x] [Review][Patch] ProductCard condition fallback [ProductCard.tsx:84] — Исправлено: item.condition ?? '-'.
+- [x] [Review][Patch] SVG fallback без aria-hidden [ProductCard.tsx] — Исправлено: добавлен aria-hidden="true".
+
+### Defer
+
+- [x] [Review][Defer] MSW shops.json as Shop[] без валидации [mocks/handlers/shops.ts] — Наследуемый паттерн из items.ts. Не belongs this story. Отложено.
+- [x] [Review][Defer] formatPrice не обрабатывает отрицательные цены — Предсуществующий код, не относится к changes this story. Отложено.
+- [x] [Review][Defer] ProductCard imgError не сбрасывается при смене item [ProductCard.tsx] — key={item.id} смягчает проблему, минимальный риск. Отложено.
+
 ## Change Log
 
 - 2026-05-10: Реализована Story 1.3 — TrustBadge, ProductCard, hooks для ломбардов, интеграция каталога
+- 2026-05-11: Code review — 1 decision-needed, 11 patch, 3 defer, 12 dismissed

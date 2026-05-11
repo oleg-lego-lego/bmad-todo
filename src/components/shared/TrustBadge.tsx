@@ -27,27 +27,27 @@ const levelStyles: Record<TrustLevel, string> = {
 };
 
 export function TrustBadge({ rating, variant, className }: TrustBadgeProps) {
-  const level = getTrustLevel(rating);
+  const clampedRating = Math.max(0, Math.min(100, Math.round(rating)));
+  const level = getTrustLevel(clampedRating);
   const label = levelLabels[level];
   const styles = levelStyles[level];
 
   const ariaLabel =
     variant === 'full'
-      ? `Рейтинг прозрачности: ${rating} из 100, уровень: ${label.toLowerCase()}`
-      : `Рейтинг прозрачности: ${rating} из 100`;
+      ? `Рейтинг прозрачности: ${clampedRating} из 100, уровень: ${label.toLowerCase()}`
+      : `Рейтинг прозрачности: ${clampedRating} из 100`;
 
   if (variant === 'compact') {
     return (
       <span
-        role="status"
         aria-label={ariaLabel}
         className={cn(
-          'inline-flex items-center gap-1 rounded-md px-2 py-1 text-[10px] font-semibold leading-none',
+          'inline-flex items-center justify-center gap-1 rounded-md min-w-[44px] min-h-[44px] px-2 py-2 text-[10px] font-semibold leading-none',
           styles,
           className,
         )}
       >
-        <span>{rating}</span>
+        <span>{clampedRating}</span>
         <span className="hidden sm:inline">Рейтинг прозрачности</span>
       </span>
     );
@@ -55,7 +55,6 @@ export function TrustBadge({ rating, variant, className }: TrustBadgeProps) {
 
   return (
     <div
-      role="status"
       aria-label={ariaLabel}
       className={cn(
         'flex items-center gap-2 rounded-lg px-3 py-2',
@@ -63,7 +62,7 @@ export function TrustBadge({ rating, variant, className }: TrustBadgeProps) {
         className,
       )}
     >
-      <span className="text-2xl font-bold">{rating}</span>
+      <span className="text-2xl font-bold">{clampedRating}</span>
       <div className="flex flex-col">
         <span className="text-xs font-medium">{label}</span>
         <span className="text-[10px] opacity-70">Рейтинг прозрачности</span>
