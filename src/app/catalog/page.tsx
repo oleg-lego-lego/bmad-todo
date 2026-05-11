@@ -1,11 +1,14 @@
 'use client';
 
-import { useMemo } from 'react';
+import { Suspense, useState, useCallback } from 'react';
 import { PageContainer } from '@/components/layout/PageContainer';
-import { ProductCard, ProductCardSkeleton } from '@/components/shared/ProductCard';
-import { useItems } from '@/hooks/use-items';
-import { useShops } from '@/hooks/use-shops';
-import type { Shop } from '@/types/shop';
+import { SearchBar } from './components/SearchBar';
+import { SortSelect } from './components/SortSelect';
+import { FilterSidebar } from './components/FilterSidebar';
+import { FilterSheet } from './components/FilterSheet';
+import { CatalogGrid } from './components/CatalogGrid';
+import { Breadcrumbs } from './components/Breadcrumbs';
+import { useFilters } from '@/hooks/use-filters';
 
 function pluralize(n: number, forms: [string, string, string]): string {
   const abs = Math.abs(n) % 100;
@@ -16,75 +19,61 @@ function pluralize(n: number, forms: [string, string, string]): string {
   return forms[2];
 }
 
-export default function CatalogPage() {
-  const { data: itemsResponse, isLoading: itemsLoading, error: itemsError } = useItems();
-  const { data: shops, isLoading: shopsLoading } = useShops();
-
-  const shopsMap = useMemo(() => {
-    if (!shops) return new Map<string, Shop>();
-    return new Map(shops.map((s) => [s.id, s]));
-  }, [shops]);
-
-  const items = itemsResponse?.data ?? [];
-  const meta = itemsResponse?.meta;
-  const isLoading = itemsLoading || shopsLoading;
-
-  if (isLoading) {
-    return (
-      <PageContainer>
-        <h1 className="text-h1 font-bold text-foreground mb-4">Каталог</h1>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-          {Array.from({ length: 8 }).map((_, i) => (
-            <ProductCardSkeleton key={i} />
-          ))}
-        </div>
-      </PageContainer>
-    );
-  }
-
-  if (itemsError) {
-    return (
-      <PageContainer>
-        <h1 className="text-h1 font-bold text-foreground mb-4">Каталог</h1>
-        <p className="text-red-500">Ошибка: {itemsError.message}</p>
-      </PageContainer>
-    );
-  }
-
-  if (items.length === 0) {
-    return (
-      <PageContainer>
-        <h1 className="text-h1 font-bold text-foreground mb-4">Каталог</h1>
-        <div className="flex flex-col items-center gap-4 py-12">
-          <p className="text-body text-secondary">Товары не найдены</p>
-          <button
-            type="button"
-            className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary-hover transition-colors"
-          >
-            Перейти в каталог
-          </button>
-        </div>
-      </PageContainer>
-    );
-  }
+function CatalogContent() {
+  const { filters } = useFilters();
+  const [totalCount, setTotalCount] = useState(0);
+  const handleTotalCount = useCallback((count: number) => setTotalCount(count), []);
 
   return (
     <PageContainer>
-      <div className="mb-4 flex items-center justify-between">
-        <h1 className="text-h1 font-bold text-foreground">Каталог</h1>
-        {meta && (
-          <span className="text-caption text-secondary">
-            {meta.total}{' '}
-            {pluralize(meta.total, ['товар', 'товара', 'товаров'])}
-          </span>
-        )}
+      <Breadcrumbs />
+
+      <h1 className="text-h1 font-bold text-foreground mb-4">Каталог</h1>
+
+      {/* Toolbar */}
+      <div className="mb-4">
+        <div className="flex items-center gap-3">
+          <div className="flex-1">
+            <SearchBar />
+          </div>
+          <SortSelect />
+          <FilterSheet />
+          {totalCount > 0 && (
+            <span className="text-sm text-muted-foreground">
+              {totalCount}{' '}
+              {pluralize(totalCount, ['товар', 'товара', 'товаров'])}
+            </span>
+          )}
+        </div>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
-        {items.map((item) => (
-          <ProductCard key={item.id} item={item} shop={shopsMap.get(item.shopId)} />
-        ))}
+      {/* Layout: sidebar + grid */}
+      <div className="flex gap-6">
+        <FilterSidebar />
+        <div className="flex-1 min-w-0">
+          <CatalogGrid filters={filters} onTotalCount={handleTotalCount} />
+        </div>
       </div>
     </PageContainer>
+  );
+}
+
+export default function CatalogPage() {
+  return (
+    <Suspense
+      fallback={
+        <PageContainer>
+          <div className="mb-4 h-6 w-32 animate-pulse rounded bg-muted" />
+          <div className="mb-4 h-9 animate-pulse rounded bg-muted" />
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <div key={i} className="h-64 animate-pulse rounded-lg bg-muted" />
+            ))}
+          </div>
+        </PageContainer>
+      }
+    >
+      <CatalogContent />
+    </Suspense>
   );
 }
