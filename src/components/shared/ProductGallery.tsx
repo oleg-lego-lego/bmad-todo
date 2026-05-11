@@ -16,7 +16,7 @@ interface ProductGalleryProps {
   className?: string;
 }
 
-const PLACEHOLDER = '/images/placeholder.webp';
+const PLACEHOLDER = '/images/placeholder.svg';
 
 export function ProductGallery({ images, title, className }: ProductGalleryProps) {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);

@@ -70,7 +70,7 @@ describe('ProductGallery', () => {
 
     const img = screen.getByRole('img');
     expect(img).toHaveAttribute('alt', 'Пустой товар');
-    expect(img).toHaveAttribute('src', '/images/placeholder.webp');
+    expect(img).toHaveAttribute('src', '/images/placeholder.svg');
   });
 
   it('renders single image without thumbnails', () => {

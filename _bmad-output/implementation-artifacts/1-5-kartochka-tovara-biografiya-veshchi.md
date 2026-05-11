@@ -1,6 +1,6 @@
 # Story 1.5: Карточка товара — «Биография вещи»
 
-Status: review
+Status: done
 
 ## Story
 
@@ -297,6 +297,24 @@ GLM-5[1m]
 - src/app/item/[id]/components/AddToCartButton.tsx (NEW)
 - package.json (MODIFIED — добавлен swiper 12.1.4)
 - pnpm-lock.yaml (MODIFIED)
+
+### Review Findings
+
+- [x] [Review][Decision] Sticky-поведение кнопки «В корзину» на desktop — подтверждено: inline на desktop, sticky на mobile. Текущее поведение правильное.
+- [x] [Review][Decision] `notFound()` при любой ошибке API — подтверждено: оставить как есть. Покрывает большинство кейсов.
+- [x] [Review][Patch] XSS через JSON-LD injection [page.tsx:63] — добавлен `.replace(/<\/(script)/gi, '<\\/$1')` после JSON.stringify.
+- [x] [Review][Patch] Клиентская ошибка рендерит error UI с кнопкой retry [ItemPageContent.tsx:23].
+- [x] [Review][Patch] Breadcrumb: убраны сепараторы из `<li>`, добавлен overflow-hidden на `<ol>` и min-w-0 [page.tsx].
+- [x] [Review][Patch] Placeholder: исправлен на `/images/placeholder.svg` [ProductGallery.tsx:19].
+- [x] [Review][Patch] Inline style заменён на Tailwind `min-w-[140px] flex-[1_1_0%]` [ItemTimeline.tsx:39].
+- [x] [Review][Patch] JSON-LD price: `String(item.price)` [page.tsx:55].
+- [x] [Review][Patch] Import type Metadata перемещён в конец [page.tsx:8].
+- [x] [Review][Patch] formatDate fallback: `|| 'Дата не указана'` [ItemTimeline.tsx:65].
+- [x] [Review][Defer] Двойной fetch в SSR (generateMetadata + page) [page.tsx:17,38] — стандартный паттерн Next.js, дедупликация fetch встроена. Deferred: оптимизация при необходимости.
+- [x] [Review][Defer] Захардкожен `InStock` в JSON-LD [page.tsx:59] — спека явно требует InStock. Deferred: маппинг status → availability в будущих эпиках.
+- [x] [Review][Defer] Отсутствует `ItemBreadcrumbs.tsx` (спека требует отдельный компонент) — хлебные крошки работают корректно inline в `page.tsx`. Deferred: рефакторинг при необходимости.
+- [x] [Review][Defer] `page.tsx` обходит hooks-слой, вызывает `@/api/items` напрямую [page.tsx:5] — серверный компонент не может использовать hooks. Это необходимый паттерн для SSR. Deferred: архитектурное решение.
+- [x] [Review][Defer] `condition` отображается как `-/10` при nullish [ItemPageContent.tsx:54] — fallback `?? '-'` разумный для граничного случая. Deferred: уточнить дизайн при необходимости.
 
 ## Change Log
 

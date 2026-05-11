@@ -21,7 +21,20 @@ export function ItemPageContent({ id }: ItemPageContentProps) {
   }
 
   if (isError || !item) {
-    return null;
+    return (
+      <div className="flex flex-col items-center justify-center gap-4 py-12 text-center">
+        <p className="text-body text-muted-foreground">
+          Не удалось загрузить информацию о товаре.
+        </p>
+        <button
+          type="button"
+          onClick={() => window.location.reload()}
+          className="rounded-button bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary-hover transition-colors cursor-pointer"
+        >
+          Попробовать снова
+        </button>
+      </div>
+    );
   }
 
   return (

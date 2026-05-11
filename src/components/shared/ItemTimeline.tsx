@@ -36,8 +36,7 @@ export function ItemTimeline({ events, className }: ItemTimelineProps) {
           <div
             key={`${event.date}-${event.title}`}
             role="listitem"
-            className="flex flex-col items-center flex-shrink-0"
-            style={{ minWidth: '140px', flex: `1 1 ${100 / events.length}%` }}
+            className="flex flex-col items-center flex-shrink-0 min-w-[140px] flex-[1_1_0%]"
           >
             {/* Connector line + dot */}
             <div className="flex w-full items-center px-2">
@@ -62,7 +61,7 @@ export function ItemTimeline({ events, className }: ItemTimelineProps) {
             {/* Content */}
             <div className="mt-2 text-center px-1">
               <p className="text-caption text-muted-foreground">
-                {formatDate(event.date)}
+                {formatDate(event.date) || 'Дата не указана'}
               </p>
               <p className="text-body font-medium text-foreground mt-0.5">
                 {event.title}
