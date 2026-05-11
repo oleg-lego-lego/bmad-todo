@@ -25,3 +25,11 @@
 ## Deferred from: code review of 1-4-stranica-kataloga-poisk-filtry-sortirovka (2026-05-11)
 
 - No validation that priceMin <= priceMax — nice-to-have, not specified in ACs, API returns empty results for invalid range
+
+## Deferred from: code review of 1-5-kartochka-tovara-biografiya-veshchi (2026-05-11)
+
+- Двойной fetch в SSR (generateMetadata + page) — стандартный Next.js паттерн, дедупликация встроена
+- Захардкожен `InStock` в JSON-LD — спека требует InStock, маппинг status → availability в будущих эпиках
+- Отсутствует `ItemBreadcrumbs.tsx` (спека требует отдельный компонент) — работает inline, рефакторинг при необходимости
+- `page.tsx` обходит hooks-слой для SSR — серверный компонент не может использовать hooks, необходимый паттерн
+- `condition` отображается как `-/10` при nullish — fallback `?? '-'` разумный для граничного случая

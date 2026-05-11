@@ -89,12 +89,12 @@ export function FilterSheet() {
                   <input
                     type="radio"
                     name="category-mobile"
-                    value={cat.id}
-                    checked={filters.category === cat.id}
+                    value={cat.slug}
+                    checked={filters.category === cat.slug}
                     onChange={() =>
                       setFilter(
                         'category',
-                        filters.category === cat.id ? undefined : cat.id,
+                        filters.category === cat.slug ? undefined : cat.slug,
                       )
                     }
                     className="size-5 accent-primary"
