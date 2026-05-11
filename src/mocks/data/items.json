@@ -8,7 +8,7 @@
     "condition": 9,
     "trustRating": 92,
     "shopId": "shop-1",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-28T10:00:00Z",
     "timeline": [
@@ -26,7 +26,7 @@
     "condition": 8,
     "trustRating": 88,
     "shopId": "shop-1",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-27T12:00:00Z",
     "timeline": [
@@ -43,7 +43,7 @@
     "condition": 9,
     "trustRating": 90,
     "shopId": "shop-4",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-26T14:00:00Z",
     "timeline": [
@@ -61,7 +61,7 @@
     "condition": 10,
     "trustRating": 95,
     "shopId": "shop-1",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-25T09:00:00Z",
     "timeline": [
@@ -79,7 +79,7 @@
     "condition": 8,
     "trustRating": 78,
     "shopId": "shop-5",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-24T11:00:00Z",
     "timeline": [
@@ -96,7 +96,7 @@
     "condition": 9,
     "trustRating": 93,
     "shopId": "shop-4",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-23T16:00:00Z",
     "timeline": [
@@ -114,7 +114,7 @@
     "condition": 7,
     "trustRating": 82,
     "shopId": "shop-1",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-22T10:00:00Z",
     "timeline": [
@@ -131,7 +131,7 @@
     "condition": 10,
     "trustRating": 97,
     "shopId": "shop-4",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-21T15:00:00Z",
     "timeline": [
@@ -149,7 +149,7 @@
     "condition": 8,
     "trustRating": 75,
     "shopId": "shop-5",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-20T13:00:00Z",
     "timeline": [
@@ -166,7 +166,7 @@
     "condition": 8,
     "trustRating": 86,
     "shopId": "shop-1",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-19T11:00:00Z",
     "timeline": [
@@ -184,7 +184,7 @@
     "condition": 7,
     "trustRating": 80,
     "shopId": "shop-1",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-18T14:00:00Z",
     "timeline": [
@@ -201,7 +201,7 @@
     "condition": 9,
     "trustRating": 84,
     "shopId": "shop-1",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-17T09:00:00Z",
     "timeline": [
@@ -218,7 +218,7 @@
     "condition": 8,
     "trustRating": 85,
     "shopId": "shop-4",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-16T16:00:00Z",
     "timeline": [
@@ -236,7 +236,7 @@
     "condition": 8,
     "trustRating": 72,
     "shopId": "shop-5",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-15T12:00:00Z",
     "timeline": [
@@ -253,7 +253,7 @@
     "condition": 9,
     "trustRating": 91,
     "shopId": "shop-4",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-14T10:00:00Z",
     "timeline": [
@@ -271,7 +271,7 @@
     "condition": 7,
     "trustRating": 68,
     "shopId": "shop-5",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-13T15:00:00Z",
     "timeline": [
@@ -288,7 +288,7 @@
     "condition": 10,
     "trustRating": 98,
     "shopId": "shop-1",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-12T11:00:00Z",
     "timeline": [
@@ -306,7 +306,7 @@
     "condition": 8,
     "trustRating": 79,
     "shopId": "shop-1",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-11T14:00:00Z",
     "timeline": [
@@ -323,7 +323,7 @@
     "condition": 8,
     "trustRating": 83,
     "shopId": "shop-4",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-10T10:00:00Z",
     "timeline": [
@@ -341,7 +341,7 @@
     "condition": 9,
     "trustRating": 87,
     "shopId": "shop-1",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-09T16:00:00Z",
     "timeline": [
@@ -359,7 +359,7 @@
     "condition": 9,
     "trustRating": 94,
     "shopId": "shop-2",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-27T10:00:00Z",
     "timeline": [
@@ -377,7 +377,7 @@
     "condition": 9,
     "trustRating": 91,
     "shopId": "shop-2",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-26T12:00:00Z",
     "timeline": [
@@ -395,7 +395,7 @@
     "condition": 8,
     "trustRating": 88,
     "shopId": "shop-2",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-25T14:00:00Z",
     "timeline": [
@@ -413,7 +413,7 @@
     "condition": 8,
     "trustRating": 86,
     "shopId": "shop-2",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-24T11:00:00Z",
     "timeline": [
@@ -431,7 +431,7 @@
     "condition": 8,
     "trustRating": 82,
     "shopId": "shop-2",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-23T16:00:00Z",
     "timeline": [
@@ -449,7 +449,7 @@
     "condition": 8,
     "trustRating": 90,
     "shopId": "shop-2",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-22T09:00:00Z",
     "timeline": [
@@ -467,7 +467,7 @@
     "condition": 9,
     "trustRating": 89,
     "shopId": "shop-2",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-21T13:00:00Z",
     "timeline": [
@@ -485,7 +485,7 @@
     "condition": 7,
     "trustRating": 79,
     "shopId": "shop-2",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-20T15:00:00Z",
     "timeline": [
@@ -503,7 +503,7 @@
     "condition": 8,
     "trustRating": 80,
     "shopId": "shop-2",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-19T10:00:00Z",
     "timeline": [
@@ -521,7 +521,7 @@
     "condition": 8,
     "trustRating": 77,
     "shopId": "shop-2",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-18T12:00:00Z",
     "timeline": [
@@ -538,7 +538,7 @@
     "condition": 7,
     "trustRating": 83,
     "shopId": "shop-2",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-17T14:00:00Z",
     "timeline": [
@@ -556,7 +556,7 @@
     "condition": 7,
     "trustRating": 76,
     "shopId": "shop-2",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-16T11:00:00Z",
     "timeline": [
@@ -574,7 +574,7 @@
     "condition": 7,
     "trustRating": 85,
     "shopId": "shop-2",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-15T16:00:00Z",
     "timeline": [
@@ -592,7 +592,7 @@
     "condition": 9,
     "trustRating": 84,
     "shopId": "shop-2",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-14T09:00:00Z",
     "timeline": [
@@ -610,7 +610,7 @@
     "condition": 6,
     "trustRating": 65,
     "shopId": "shop-2",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-13T14:00:00Z",
     "timeline": [
@@ -627,7 +627,7 @@
     "condition": 9,
     "trustRating": 96,
     "shopId": "shop-3",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-28T10:00:00Z",
     "timeline": [
@@ -645,7 +645,7 @@
     "condition": 9,
     "trustRating": 94,
     "shopId": "shop-3",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-27T11:00:00Z",
     "timeline": [
@@ -663,7 +663,7 @@
     "condition": 9,
     "trustRating": 88,
     "shopId": "shop-3",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-26T14:00:00Z",
     "timeline": [
@@ -681,7 +681,7 @@
     "condition": 8,
     "trustRating": 75,
     "shopId": "shop-3",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-25T16:00:00Z",
     "timeline": [
@@ -698,7 +698,7 @@
     "condition": 10,
     "trustRating": 98,
     "shopId": "shop-3",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-24T09:00:00Z",
     "timeline": [
@@ -716,7 +716,7 @@
     "condition": 9,
     "trustRating": 92,
     "shopId": "shop-3",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-23T13:00:00Z",
     "timeline": [
@@ -734,7 +734,7 @@
     "condition": 8,
     "trustRating": 82,
     "shopId": "shop-3",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-22T15:00:00Z",
     "timeline": [
@@ -751,7 +751,7 @@
     "condition": 8,
     "trustRating": 78,
     "shopId": "shop-3",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-21T10:00:00Z",
     "timeline": [
@@ -769,7 +769,7 @@
     "condition": 9,
     "trustRating": 95,
     "shopId": "shop-3",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-20T11:00:00Z",
     "timeline": [
@@ -787,7 +787,7 @@
     "condition": 8,
     "trustRating": 85,
     "shopId": "shop-3",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-19T14:00:00Z",
     "timeline": [
@@ -805,7 +805,7 @@
     "condition": 9,
     "trustRating": 70,
     "shopId": "shop-3",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-18T16:00:00Z",
     "timeline": [
@@ -822,7 +822,7 @@
     "condition": 10,
     "trustRating": 97,
     "shopId": "shop-3",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-17T09:00:00Z",
     "timeline": [
@@ -840,7 +840,7 @@
     "condition": 9,
     "trustRating": 90,
     "shopId": "shop-3",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-16T13:00:00Z",
     "timeline": [
@@ -858,7 +858,7 @@
     "condition": 7,
     "trustRating": 80,
     "shopId": "shop-3",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-15T11:00:00Z",
     "timeline": [
@@ -876,7 +876,7 @@
     "condition": 9,
     "trustRating": 74,
     "shopId": "shop-3",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-14T15:00:00Z",
     "timeline": [
@@ -893,7 +893,7 @@
     "condition": 10,
     "trustRating": 99,
     "shopId": "shop-3",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-13T10:00:00Z",
     "timeline": [
@@ -911,7 +911,7 @@
     "condition": 8,
     "trustRating": 81,
     "shopId": "shop-2",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-12T14:00:00Z",
     "timeline": [
@@ -929,7 +929,7 @@
     "condition": 10,
     "trustRating": 93,
     "shopId": "shop-4",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-11T10:00:00Z",
     "timeline": [
@@ -947,7 +947,7 @@
     "condition": 9,
     "trustRating": 89,
     "shopId": "shop-3",
-    "images": ["/images/placeholder.webp", "/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg", "/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-10T14:00:00Z",
     "timeline": [
@@ -965,7 +965,7 @@
     "condition": 8,
     "trustRating": 87,
     "shopId": "shop-2",
-    "images": ["/images/placeholder.webp"],
+    "images": ["/images/placeholder.svg"],
     "status": "active",
     "createdAt": "2026-04-09T16:00:00Z",
     "timeline": [
